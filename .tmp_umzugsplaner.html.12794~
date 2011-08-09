@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="description" content="Eine Umzugs Todo Liste mit Zeitangaben" />
+  <meta name="keywords" content="Umzugsplaner" />
+  <meta name="author" content="Michael Nindl for Immoscout24" />
+  <meta charset="UTF-8" />
+  <link href="css/reset_min.css" type="text/css" rel="stylesheet"/>
+  <link href="css/jquery-ui-1.8.14.custom.css" type="text/css" rel="stylesheet"/>
+  <link href="removal_planner.css" type="text/css" rel="stylesheet"/>
+<title>Umzugsplaner</title>
+</head>
+<body id="removal_planner">
+  <h1>Mein Umzugsplaner</h1>
+  <p>
+    Um Ihnen die Vorbereitungen zu erleichtern, bieten wir Ihnen hier einen auf Ihre Bedürfnisse ausgerichteten Umzugsplaner an.
+  </p>
+  <form id="">
+    <p class="form_label">Umzugstermin:<input id="datepicker" type="text"></p>
+    <input type="radio" value="own" name="removal_type" checked="checked"><span>Umzug in Eigenregie</span>
+    <input type="radio" value="sped" name="removal_type"><span>Umzug mit einem Umzugsunternehmen</span>
+    <input type="submit">
+  </form>
+  
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/jspdf.js"></script>
+    <script type="text/javascript" src="js/libs/base64.js"></script>
+    <script type="text/javascript" src="js/libs/sprintf.js"></script>
+    <script type="text/javascript" src="js/removal_planner.js"></script>
+</body>
+
+</html> 

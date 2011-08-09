@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items>
+<removalTipItem type="sped" order="-55">
+  <headline>Angebote von Umzugsfirmen einholen</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="-42">
+  <headline>Umzugsfirma beauftragen - Vertrag gründlich lesen</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="-31">
+  <headline>Falls neben der Umzugsfirma Helfer notwendig sind - diese suchen und verpflichten</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="-16">
+  <headline>Chance nutzen und bestehenden Haushalt entrümpeln - eventuell wird die Entsorgung auch von Ihrer Umzugsfirma übernommen</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="-10">
+  <headline>Wenn der Service des Umzugsunternehmens das Möbel-Abbauen nicht beinhaltet, kann mit dem Auseinanderbauen begonnen werden</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="-9">
+  <headline>Wenn die Umzugsfirma diesen Service nicht übernimmt, können die ersten Kartons gepackt werden
+  (persönlicher Bedarf, Medikamente, Kulturbeutel, Wäsche und Ähnliches getrennt verpacken)</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="-7">
+  <headline>Gegebenenfalls private Umzugshelfer erinnern</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="-2">
+  <headline>    +Gegebenenfalls restliche Kartons packen
+    +Falls dieser Service nicht von der Umzugsfirma erbracht wird, Schränke für den Transport sichern (z.B. Schubladen verkleben)
+    +Kühlschrank/Tiefkühltruhe abtauen und reinigen
+    +Treppenhaus der alten und neuen Wohnung auf Vorschäden überprüfen (gegebenenfalls dokumentieren)</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="-1">
+  <headline>Angebote von Umzugsfirmen einholen</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="0">
+  <headline>Angebote von Umzugsfirmen einholen</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="1">
+  <headline>Angebote von Umzugsfirmen einholen</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="2">
+  <headline>+Geliehenes Verpackungsmaterial und Werkzeug zurückgeben
+    +Gegebenenfalls restliche Möbel aufbauen
+    +Vor(!) den allerletzten Schönheitskorrekturen in der neuen Wohnung: Einweihungsparty machen</headline>
+</removalTipItem>
+<removalTipItem type="sped" order="12">
+  <headline>Um anderen Umziehenden die Entscheidung zu erleichtern: Bewerten Sie Ihre Umzugsfirma</headline>
+</removalTipItem>
+<removalTipItem type="own" order="-31">
+  <headline>Umzugshelfer suchen und verpflichten</headline>
+</removalTipItem>
+<removalTipItem type="own" order="-28">
+  <headline>Umzugswagen besorgen (ggf. Fahrer mit entsprechenden Führerschein suchen)</headline>
+</removalTipItem>
+<removalTipItem type="own" order="-16">
+  <headline>Chance nutzen und bestehenden Haushalt entrümpeln</headline>
+</removalTipItem>
+<removalTipItem type="own" order="-13">
+  <headline>Sondergehnemigung für Parkplatzabsperrung am alten und neuen Wohnort beantragen</headline>
+</removalTipItem>
+<removalTipItem type="own" order="-10">
+  <headline>Möbel abbauen</headline>
+</removalTipItem>
+<removalTipItem type="own" order="-9">
+  <headline>Die ersten Kartons packen</headline>
+</removalTipItem>
+<removalTipItem type="own" order="-7">
+  <headline>Umzugshelfer erinnern</headline>
+</removalTipItem>
+<removalTipItem type="own" order="-2">
+  <headline>+Restliche Kartons packen
+    +Schränke für den Transport sichern (z.B. Schubladen verkleben)
+    +Kühlschrank/Tiefkühltruhe abtauen und reinigen
+    +Treppenhaus der alten und neuen Wohnung auf Vorschäden überprüfen (gegebenenfalls dokumentieren)</headline>
+</removalTipItem>
+<removalTipItem type="own" order="-1">
+  <headline>+Gegebenenfalls schon erste Transporte zur neuen Wohnung mit dem eigenem PKW durchführen (wenn vorhanden)
+    +Pflanzen noch einmal leicht gießen und Blumentöpfe mit Folie verpacken
+    +Alle Namensschilder im alten Wohnhaus entfernen (Wohnungstür, Briefkasten, Klingel)
+    +Fotos vom Leerzustand der neuen Wohnung machen, Mängel dokumentieren
+    +Möbelstellplan in jedem Raum der neuen Wohnung aufhängen
+    +Glühbirnen in der neuen Wohnung installieren</headline>
+</removalTipItem>
+<removalTipItem type="own" order="0">
+  <headline>Heute ziehen Sie um - Folgendes ist zu erledigen:</headline>
+</removalTipItem>
+<removalTipItem type="own" order="1">
+  <headline>Neue Namensschilder anbringen
+    Alle Möbel etc. zusammenbauen und anschrauben
+    Müll umweltgerecht entsorgen</headline>
+</removalTipItem>
+<removalTipItem type="own" order="2">
+  <headline>Geliehenes Verpackungsmaterial und Werkzeug zurückgeben
+    Restliche Möbel aufbauen
+    Vor(!) den allerletzten Schönheitskorrekturen in der neuen Wohnung: Einweihungsparty machen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-89">
+  <headline>Alte Wohnung kündigen und gegebenenfalls einen Nachmieter suchen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-87">
+  <headline>Mietvertrag der neuen Wohnung unterschreiben</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-85">
+  <headline>Kaution der alten Wohnung zurückfordern</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-83">
+  <headline>Kostenplan für den gesamten Umzug erstellen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-79">
+  <headline>Gegebenenfalls neue Möbel bestellen und deren Lieferfristen beachten</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-76">
+  <headline>Liste mit gesamten Umzugsgut erstellen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-69">
+  <headline>Anfallende Arbeiten in alter Wohnung (Renovierung z.B. laut Mietvertrag) notieren</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-59">
+  <headline>Sicht-Kontrolle von TV-, Telefon- und anderen Anschlüssen in der neuen Wohnung</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-54">
+  <headline>Ummelden:</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-51">
+  <headline>Sonderurlaub/Umzugstage beantragen und über eventuelle Zuschüsse informieren</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-49">
+  <headline>Handwerker (Maler, Elektriker etc.) engagieren</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-48">
+  <headline>Kaution für neue Wohnung hinterlegen - gegebenenfalls Kautionskonto eröffnen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-44">
+  <headline>Renovierung neue Wohnung planen, Wohnung vermessen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-39">
+  <headline>Einzugsermächtigungen bearbeiten (neue Miete, alte Miete, Adressen, Bankverbindungen etc.)</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-34">
+  <headline>Ausmessen des alten und neuen Treppenhauses</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-32">
+  <headline>Sicherheitskopien von den wichtigsten Dokumenten anfertigen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-30">
+  <headline>Ummelden:</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-29">
+  <headline>Sperrmülltermin machen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-27">
+  <headline>Wohnungsübergabe und Abstandszahlung mit Nachmieter schriftlich klären</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-26">
+  <headline>Zählerstandablesung vereinbaren</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-25">
+  <headline>Heizkostenabrechnung mit dem alten Vermieter klären</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-24">
+  <headline>Kinderbetreuung und Haustierplatz für den Umzugstag klären</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-23">
+  <headline>Wohnungssschlüssel für die neue Wohnung besorgen (und duplizieren)</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-22">
+  <headline>Neue Wohnung renovieren/bezugsfertig machen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-21">
+  <headline>Möbelstellplan für neue Wohnung erstellen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-20">
+  <headline>Wohnungsübergabetermin für die alte Wohnung mit dem Vermieter vereinbaren</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-19">
+  <headline>Alte und neue Nachbarn über Ein- beziehungsweise Auszug informieren</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-18">
+  <headline>Stadtplan und wichtige Adressen/ Telefonnummern des neuen Wohnorts besorgen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-17">
+  <headline>Hilfsmittel für Ihren Umzug besorgen: Umzugs- und Bücherkartons, Aufkleber für Kartons, Luftpolsterfolie, Packpapier, Klebeband, Möbeldecken, Malervlies</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-15">
+  <headline>Teppiche und Gardinen reinigen und gegebenenfalls den neuen Maßen anpassen lassen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-14">
+  <headline>Lebensmittelvorräte aufbrauchen (Tiefkühlkost und Dauervorräte)</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-12">
+  <headline>Keller, Garage und Abstellräume ausräumen und konsequent ausmisten</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-11">
+  <headline>Termine bestätigen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="-5">
+  <headline>Werkzeugkiste zusammenstellen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="3">
+  <headline>Renovierung alte Wohnung</headline>
+</removalTipItem>
+<removalTipItem type="common" order="4">
+  <headline>Ummelden:</headline>
+</removalTipItem>
+<removalTipItem type="common" order="5">
+  <headline>Wohnungsübergabe: Übergabeprotokolle ausfüllen und Schlüsselübergabe quittieren lassen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="6">
+  <headline>Neue Wohnung aufräumen: was jetzt stehenbleibt, bleibt es vielleicht für immer</headline>
+</removalTipItem>
+<removalTipItem type="common" order="7">
+  <headline>Hausapotheke überprüfen, ggf. ergänzen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="9">
+  <headline>Bankkonto am neuen Wohnort eröffnen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="10">
+  <headline>Kostenbelege für Abrechnungen/Steuer sortieren</headline>
+</removalTipItem>
+<removalTipItem type="common" order="11">
+  <headline>Freunde/Bekannte über neue Adresse informieren</headline>
+</removalTipItem>
+<removalTipItem type="common" order="13">
+  <headline>Freunde zum Essen einladen</headline>
+</removalTipItem>
+<removalTipItem type="common" order="14">
+  <headline>Die neue Umgebung kennenlernen</headline>
+</removalTipItem>
+</items>

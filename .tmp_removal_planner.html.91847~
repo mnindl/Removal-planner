@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="description" content="Eine Umzugs Todo Liste mit Zeitangaben" />
+  <meta name="keywords" content="Umzugsplaner" />
+  <meta name="author" content="Michael Nindl for Immoscout24" />
+  <meta charset="UTF-8" />
+  <link href="css/reset_min.css" type="text/css" rel="stylesheet"/>
+  <link href="css/jquery-ui-1.8.14.custom.css" type="text/css" rel="stylesheet"/>
+  <link href="removal_planner.css" type="text/css" rel="stylesheet"/>
+<title>Umzugsplaner</title>
+</head>
+<body id="removal_planner">
+  <h1>Mein Umzugsplaner</h1>
+  <p>
+    Um Ihnen die Vorbereitungen zu erleichtern, bieten wir Ihnen hier einen auf Ihre Bedürfnisse ausgerichteten Umzugsplaner an.
+  </p>
+  <form id="rem_plann_form">
+    <p class="form_label">Umzugstermin:<input id="datepicker" type="text"></p>
+    <input type="radio" value="own" name="removal_type" checked="checked"><span>Umzug in Eigenregie</span>
+    <input type="radio" value="sped" name="removal_type"><span>Umzug mit einem Umzugsunternehmen</span>
+    <input type="submit">
+  </form>
+  <div id="plan_result" style="display: none;">
+  
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">Zeitliche Reihenfolge</a></li>
+        <li><a href="#tabs-2">Vor der Umzugswoche</a></li>
+        <li><a href="#tabs-3">In der Umzugswoche</a></li>
+        <li><a href="#tabs-4">Nach der Umzugswoche</a></li>
+      </ul>
+      <div id="tabs-1">
+        
+      </div>
+      <div id="tabs-2">
+        <p>Morbi tincidunt, dui sit amet facilisis feugiat, odio metus gravida ante, ut pharetra massa metus id nunc. Duis scelerisque molestie turpis. Sed fringilla, massa eget luctus malesuada, metus eros molestie lectus, ut tempus eros massa ut dolor. Aenean aliquet fringilla sem. Suspendisse sed ligula in ligula suscipit aliquam. Praesent in eros vestibulum mi adipiscing adipiscing. Morbi facilisis. Curabitur ornare consequat nunc. Aenean vel metus. Ut posuere viverra nulla. Aliquam erat volutpat. Pellentesque convallis. Maecenas feugiat, tellus pellentesque pretium posuere, felis lorem euismod felis, eu ornare leo nisi vel felis. Mauris consectetur tortor et purus.</p>
+      </div>
+      <div id="tabs-3">
+        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+      </div>
+      <div id="tabs-4">
+        <p>Mauris eleifend est et turpis. Duis id erat. Suspendisse potenti. Aliquam vulputate, pede vel vehicula accumsan, mi neque rutrum erat, eu congue orci lorem eget lorem. Vestibulum non ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce sodales. Quisque eu urna vel enim commodo pellentesque. Praesent eu risus hendrerit ligula tempus pretium. Curabitur lorem enim, pretium nec, feugiat nec, luctus a, lacus.</p>
+        <p>Duis cursus. Maecenas ligula eros, blandit nec, pharetra at, semper at, magna. Nullam ac lacus. Nulla facilisi. Praesent viverra justo vitae neque. Praesent blandit adipiscing velit. Suspendisse potenti. Donec mattis, pede vel pharetra blandit, magna ligula faucibus eros, id euismod lacus dolor eget odio. Nam scelerisque. Donec non libero sed nulla mattis commodo. Ut sagittis. Donec nisi lectus, feugiat porttitor, tempor ac, tempor vitae, pede. Aenean vehicula velit eu tellus interdum rutrum. Maecenas commodo. Pellentesque nec elit. Fusce in lacus. Vivamus a libero vitae lectus hendrerit hendrerit.</p>
+      </div>    
+    </div>
+  
+  </div>  
+  
+  
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="js/jspdf.js"></script>
+    <script type="text/javascript" src="js/libs/base64.js"></script>
+    <script type="text/javascript" src="js/libs/sprintf.js"></script>
+    <script type="text/javascript" src="js/removal_planner.js"></script>
+</body>
+
+</html> 

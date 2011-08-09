@@ -1,0 +1,16 @@
+#removal_planner {
+  
+}
+#removal_planner .scroll-pane {
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+}
+#removal_planner #tabs .ui-tabs-hide {
+  position: absolute;
+  left: -10000px;
+  display: block;
+}
+#tabs {
+  width: 100%;
+}
