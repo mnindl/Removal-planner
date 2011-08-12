@@ -266,6 +266,27 @@ var jsPDF = function(){
 	var pdfEscape = function(text) {
 		return text.replace(/\\/g, '\\\\').replace(/\(/g, '\\(').replace(/\)/g, '\\)');
 	}
+  
+  var _drawLine = function(x1, y1, x2, y2, weight, style) {
+    if (typeof weight === "undefined" || weight < 0) {
+      weight = 1;
+    }
+    
+    if (typeof style === "undefined") {
+      style = '[] 0 d';
+    } else {
+      if (style === 'dotted') {
+        style = '[1 2] 1 d';
+      } else if (style === 'dashed') {
+        style = '[4 2] 2 d';
+      } else {
+        style = '[] 0 d';
+      }
+    }
+    
+    var str = sprintf('\n/LEP BMC \nq\n0 G\n%.2f w\n%s\n0 J\n1 0 0 1 0 0 cm\n%.2f %.2f m\n%.2f %.2f l\nS\nQ\nEMC\n', weight, style, k*x1, k*(pageHeight-y1), k*x2, k*(pageHeight-y2));
+    out(str);
+  };  
 	
 	return {
 		addPage: function() {
@@ -298,7 +319,8 @@ var jsPDF = function(){
 		},
 		setFontSize: function(size) {
 			fontSize = size;
-		}
+		},
+    drawLine: _drawLine
 	}
 
 };

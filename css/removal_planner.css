@@ -1,5 +1,5 @@
 #removal_planner {
-  
+  width: 762px;
 }
 #removal_planner .scroll-pane {
   width: 100%;
@@ -14,3 +14,8 @@
 #tabs {
   width: 100%;
 }
+.jScrollPaneContainer {
+position: relative;
+overflow: hidden;
+z-index: 1;
+} 

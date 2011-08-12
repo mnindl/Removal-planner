@@ -6,11 +6,27 @@ google.load("jqueryui", "1.8.14");
 if (!window.UMZUGSPLANER) { var UMZUGSPLANER = {}; }
 
 UMZUGSPLANER.compute = (function () {
-  var pdfTab = [];
+  var pdfTab = [],
+      html_tab1 = [],
+      html_tab2 = [],
+      html_tab3 = [],
+      html_tab4 = [],
+      my_datepicker,
+      scollbar_set = false;
   function createPDF() {
     var doc = new jsPDF(),
-        pdf_data;
-   /* switch(pdfTab)
+        pdf_data,
+        n,
+        pdf_row = 40;
+    doc.setFontSize(22);
+    doc.text(20, 20, "Umzugsplan by ImmoScout24");
+    doc.setFontSize(16);
+    doc.text(20, 30, 'Datum');
+    // test
+    doc.drawLine(100, 100, 100, 120, 1.0, 'dashed');
+    doc.text(80, 30, 'Aufgabe');
+    doc.setFontSize(14);
+    switch(pdfTab)
     {
     case "html_tab1":
       pdf_data = html_tab1;
@@ -24,12 +40,18 @@ UMZUGSPLANER.compute = (function () {
     case "html_tab4":
       pdf_data = html_tab4;
       break;
-    }*/
-    //console.log(pdf_data);
-    doc.text(20, 20, 'Hello world!');
-    doc.text(20, 30, 'This is client-side Javascript, pumping out a PDF.');
-    doc.addPage();
-    doc.text(20, 20, 'Do you like that?');
+    }
+    for (var i = -1, n = pdf_data.length; ++i < n;) {
+      var time = pdf_data[i].slice(pdf_data[i].indexOf('time') + 6, pdf_data[i].indexOf('<\/div>'));
+      var tip = pdf_data[i].slice(pdf_data[i].indexOf('tip') + 5, pdf_data[i].lastIndexOf('<\/div>'));
+      doc.text(20, pdf_row, time);
+      doc.text(80, pdf_row, tip);
+      pdf_row += 10;
+      if (pdf_row === 250) {
+        doc.addPage();
+        pdf_row = 20;
+      }
+    }
     // Output as Data URI
     doc.output('datauri');
   }
@@ -53,79 +75,94 @@ UMZUGSPLANER.compute = (function () {
     showMonthAfterYear: false,
     yearSuffix: ''};
     $.datepicker.setDefaults($.datepicker.regional['de']);
-    $( "#datepicker" ).datepicker();
+    my_datepicker = $( "#datepicker" ).datepicker();
   }
-  function setTabData (xml, removal_type) {
-    var html_tab1 = [],
-      html_tab2 = [],
-      html_tab3 = [],
-      html_tab4 = [];
-      console.log(html_tab1.length);
-    var removal_date = $( "#datepicker" ).datepicker("getDate" ),
-        common_items = $(xml).find('removalTipItem[type="common"]'),
+  function setTabData (xml, removal_type, removal_date) {
+    var common_items = $(xml).find('removalTipItem[type="common"]'),
         removal_type_items = $(xml).find('removalTipItem[type="'+removal_type+'"]'),
         removal_type_items_time = [],
         common_items_time = [],
         merged_items_time,
         merged_items_time_size,
-        removal_type_items_size = removal_type_items.size(),
-        common_items_size = common_items.size();
-    $('.scroll-pane').html("test");
-    for (var i = 0; i < removal_type_items_size; ++i) {
+        day_milli_sec = 24*60*60*1000,
+        week_milli_sec = 7*24*60*60*1000,
+        n,
+        i2 = -1,
+        i3 = -1,
+        i4 = -1;
+    for (var i = -1, n = removal_type_items.length; ++i < n;) {
       removal_type_items_time[i] = Number($(removal_type_items[i]).attr('order'));
     }
-    for (var i = 0; i < common_items_size; ++i) {
+    for (var i = -1, n = common_items.length; ++i < n;) {
       common_items_time[i] = Number($(common_items[i]).attr('order'));
     }
     merged_items_time = removal_type_items_time.concat(common_items_time);
     merged_items_time.sort(function(a,b){return a - b});
-    merged_items_time_size = merged_items_time.length;
-    for ( var i = 0; i < merged_items_time_size; ++i) {
-      var item_date = new Date(),
-          removal_week_end = new Date(),
-          order = merged_items_time[i],
+    for ( var i = -1, n = merged_items_time.length; ++i < n;) {
+     // var start = new Date().getTime();
+      var order = merged_items_time[i], 
+          item_date = new Date(removal_date.getTime() + order*day_milli_sec),
+          removal_week_end = new Date(removal_date.getTime() + week_milli_sec),
           tip = $(xml).find('removalTipItem[type="'+removal_type+'"][order="'+order+'"] headline');
-      item_date.setDate(removal_date.getDate()+(order));
+    /*var end = new Date().getTime();
+    var time = end - start;
+    console.log('Execution time: ' + time);*/
       if (tip.size() >= 1) {
         tip = tip.text();
       } else {
         tip = $(xml).find('removalTipItem[type="common"][order="'+order+'"] headline').text();
       }
-      html_tab1[i] = "<div class=\"time\">"+item_date+i+"</div>"
-                      +"<div class=\"tip\">"+tip+"</div><br/><br/>";
+      html_tab1[i] = "<div class=\"time\">"+item_date.toLocaleDateString()+"</div>"
+                      +"<div class=\"tip\">"+tip+"</div>";
       if (item_date < removal_date) {
-        html_tab2[i] = html_tab1[i];
+        ++i2;
+        html_tab2[i2] = html_tab1[i];
       }
-      removal_week_end.setDate(removal_date.getDate()+ 7);
       if (item_date >= removal_date && item_date <= removal_week_end) {
-        html_tab3[i] = html_tab1[i];
+        ++i3;
+        html_tab3[i3] = html_tab1[i];
       }
       if (item_date > removal_week_end) {
-        html_tab4[i] = html_tab1[i];
+        ++i4;
+        html_tab4[i4] = html_tab1[i];
       }
+
     }
-    console.log(html_tab1.length);
-    $('#tab1 .scroll-pane').append(html_tab1.join(""));
-    $('#tab2 .scroll-pane').append(html_tab2.join(""));
-    $('#tab3 .scroll-pane').append(html_tab3.join(""));
-    $('#tab4 .scroll-pane').append(html_tab4.join(""));
+    console.log($('#tab1 .scroll-pane'));
+    $('.scroll-pane .tips').html("");
+    $('#tab1 .scroll-pane .tips').append(html_tab1.join(""));
+    $('#tab2 .scroll-pane .tips').append(html_tab2.join(""));
+    $('#tab3 .scroll-pane .tips').append(html_tab3.join(""));
+    $('#tab4 .scroll-pane .tips').append(html_tab4.join(""));
     $('#plan_result').show();
   }
+  function initTabs() {
+    $('#tabs').tabs( {
+      show: function(ev, ui) {
+        pdfTab = "html_"+ui.panel.id;
+        $("#"+ui.panel.id+" .scroll-pane").jScrollPane();
+      }
+    });
+  }  
   function initEventshandler() {
     $('#rem_plann_form').submit(function() {
       var removal_type = $('input:radio[name="removal_type"]:checked').val();
-      $.ajax({
-        type: "GET",
-        url: "items.xml",
-        dataType: "xml",
-        async: true,
-        success: function (xml) {
-          setTabData(xml, removal_type);
-        },
-        error: function (req, error, exception) {
-          alert(eror);
-        }
-      });
+      var datepicker_date = $( "#datepicker" ).datepicker("getDate" );
+      if(datepicker_date !== null) {
+        $.ajax({
+          type: "GET",
+          url: "removalTips.xml",
+          dataType: "xml",
+          async: true,
+          success: function (xml) {
+            setTabData(xml, removal_type, datepicker_date);
+            initTabs();
+          },
+          error: function (req, error, exception) {
+            alert(eror);
+          }
+        });
+      }
       return false;
     });
     $('#pdf_link').click(function(event) {
@@ -140,12 +177,7 @@ UMZUGSPLANER.compute = (function () {
   function init() {
     initDatePicker();
     initEventshandler();
-    $('#tabs').tabs( {
-      show: function(ev, ui) {
-        pdfTab = "html_"+ui.panel.id;
-      }
-    });
-     /*$('.scroll-pane').jScrollPane();*/
+    
   }
   return {
     init: function () {
