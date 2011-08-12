@@ -2,241 +2,494 @@
 <items>
 <removalTipItem type="sped" order="-55">
   <headline>Angebote von Umzugsfirmen einholen</headline>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/ratgeber/umzugsplaner/umzug-planen.jsp">
+    Tipps zum Umzug mit einer Spedition
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzugsplaner/umzugskostenrechner/index.jsp">
+    Umzugskostenrechner
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/Lead/Start/Umzugsunternehmen">
+    Finden Sie hier eine Umzugsfirma in Ihrer Region
+  </link>
+  <link type="extern" href="http://redirect.immobilienscout24.de/servlet/redirect?ref=%2Fde%2Fsnippets%2Fumzug%2Fmein-umzugsplaner%2Fsnippet.xml&#38;location=http%3A%2F%2Fwww.umzugsfirmen-check.de%2F">
+    Bewertungen von Umzugsfirmen in Ihrer Nähe lesen
+  </link>
 </removalTipItem>
 <removalTipItem type="sped" order="-42">
-  <headline>Umzugsfirma beauftragen - Vertrag gründlich lesen</headline>
+  <headline>Umzugsfirma beauftragen</headline>
+  <text>Vertrag gründlich lesen.</text>
 </removalTipItem>
 <removalTipItem type="sped" order="-31">
-  <headline>Falls neben der Umzugsfirma Helfer notwendig sind - diese suchen und verpflichten</headline>
+  <headline>Helfer suchen</headline>
+  <text>Falls neben der Umzugsfirma Helfer notwendig sind - diese suchen und verpflichten.</text>
 </removalTipItem>
 <removalTipItem type="sped" order="-16">
-  <headline>Chance nutzen und bestehenden Haushalt entrümpeln - eventuell wird die Entsorgung auch von Ihrer Umzugsfirma übernommen</headline>
+  <headline>Entrümpeln</headline>
+  <text>Chance nutzen und bestehenden Haushalt entrümpeln - eventuell wird die Entsorgung auch von Ihrer Umzugsfirma übernommen.</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzug-eigenregie/lagerraum/index-alt.jsp">
+    Sie benötigen Lagerraum für Ihre Möbel? Jetzt mieten.
+  </link>
 </removalTipItem>
 <removalTipItem type="sped" order="-10">
-  <headline>Wenn der Service des Umzugsunternehmens das Möbel-Abbauen nicht beinhaltet, kann mit dem Auseinanderbauen begonnen werden</headline>
+  <headline>Möbel Abbau</headline>
+  <text>Wenn der Service des Umzugsunternehmens das Möbel-Abbauen nicht beinhaltet, kann mit dem Auseinanderbauen begonnen werden.</text>
 </removalTipItem>
 <removalTipItem type="sped" order="-9">
-  <headline>Wenn die Umzugsfirma diesen Service nicht übernimmt, können die ersten Kartons gepackt werden
-  (persönlicher Bedarf, Medikamente, Kulturbeutel, Wäsche und Ähnliches getrennt verpacken)</headline>
+  <headline>Kartons packen</headline>
+  <text>
+    Wenn die Umzugsfirma diesen Service nicht übernimmt, können die ersten Kartons gepackt werden (persönlicher Bedarf, Medikamente, Kulturbeutel, Wäsche und Ähnliches getrennt verpacken).
+  </text>
 </removalTipItem>
 <removalTipItem type="sped" order="-7">
-  <headline>Gegebenenfalls private Umzugshelfer erinnern</headline>
+  <headline>Erinnerung Umzugshelfer</headline>
+  <text>Gegebenenfalls private Umzugshelfer erinnern.</text>
 </removalTipItem>
 <removalTipItem type="sped" order="-2">
-  <headline>    +Gegebenenfalls restliche Kartons packen
-    +Falls dieser Service nicht von der Umzugsfirma erbracht wird, Schränke für den Transport sichern (z.B. Schubladen verkleben)
-    +Kühlschrank/Tiefkühltruhe abtauen und reinigen
-    +Treppenhaus der alten und neuen Wohnung auf Vorschäden überprüfen (gegebenenfalls dokumentieren)</headline>
+  <headline>Noch 2 Tage bis zum Umzug</headline>
+  <list>
+    <listItem>Gegebenenfalls restliche Kartons packen.</listItem>
+    <listItem>Falls dieser Service nicht von der Umzugsfirma erbracht wird, Schränke für den Transport sichern (z.B. Schubladen verkleben).</listItem>
+    <listItem>Kühlschrank/Tiefkühltruhe abtauen und reinigen.</listItem>
+    <listItem>Treppenhaus der alten und neuen Wohnung auf Vorschäden überprüfen (gegebenenfalls dokumentieren).</listItem>
+  </list>
 </removalTipItem>
 <removalTipItem type="sped" order="-1">
-  <headline>    +Pflanzen noch einmal leicht gießen und Blumentöpfe mit Folie verpacken
-    +Alle Namensschilder im alten Wohnhaus entfernen (Wohnungstür, Briefkasten, Klingel)Fotos vom Leerzustand der neuen Wohnung machen, Mängel dokumentieren
-    +Möbelstellplan in jedem Raum der neuen Wohnung aufhängen
-    +Glühbirnen in der neuen Wohnung installieren</headline>
+  <headline>Noch 1 Tag bis zum Umzug</headline>
+  <list>
+    <listItem>Pflanzen noch einmal leicht gießen und Blumentöpfe mit Folie verpacken.</listItem>
+    <listItem>Alle Namensschilder im alten Wohnhaus entfernen (Wohnungstür, Briefkasten, Klingel). Fotos vom Leerzustand der neuen Wohnung machen, Mängel dokumentieren.</listItem>
+    <listItem>Möbelstellplan in jedem Raum der neuen Wohnung aufhängen.</listItem>
+    <listItem>Glühbirnen in der neuen Wohnung installieren.</listItem>
+  </list>
 </removalTipItem>
 <removalTipItem type="sped" order="0">
-  <headline>Heute ziehen Sie um - Folgendes ist zu erledigen:
-   Genau lesen, was den Möbelpackern unterschrieben wird
-    Komplette Liste aller zu transportierenden Gegenstände erstellen lassen
-    Neben dem Rechnungsbetrag auch Essen und Trinkgeld für die Umzugsfirma bereithalten
-    Ausreichend Reinigungsmittel, Mülltüten und eine Grundausstattung an erste Hilfe Utensilien (u.a. Pflaster) bereitstellen
-    Gegebenenfalls Umzugshelfer einweisen
-    Unterlagen, Wertgegenstände und persönlicher Bedarf selbst in die neue Wohnung transportieren
-    Fußböden der neuen Wohnung, wie Teppiche und Parkett zum Schutz abdecken (lassen)
-    Gegebenenfalls Schäden protokollieren und die Unterschrift der Umzugsfirma einholen
-    Treppenhaus des alten und neuen Wohnhauses reinigen und auf Schäden überprüfen</headline>
+  <headline>Heute ziehen Sie um - Folgendes ist zu erledigen:</headline>
+  <list>
+    <listItem>Genau lesen, was den Möbelpackern unterschrieben wird.</listItem>
+    <listItem>Komplette Liste aller zu transportierenden Gegenstände erstellen lassen.</listItem>
+    <listItem>Neben dem Rechnungsbetrag auch Essen und Trinkgeld für die Umzugsfirma bereithalten.</listItem>
+    <listItem>Ausreichend Reinigungsmittel, Mülltüten und eine Grundausstattung an erste Hilfe Utensilien (u.a. Pflaster) bereitstellen.</listItem>
+    <listItem>Gegebenenfalls Umzugshelfer einweisen.</listItem>
+    <listItem>Unterlagen, Wertgegenstände und persönlicher Bedarf selbst in die neue Wohnung transportieren.</listItem>
+    <listItem>Fußböden der neuen Wohnung, wie Teppiche und Parkett zum Schutz abdecken (lassen).</listItem>
+    <listItem>Gegebenenfalls Schäden protokollieren und die Unterschrift der Umzugsfirma einholen.</listItem>
+    <listItem>Treppenhaus des alten und neuen Wohnhauses reinigen und auf Schäden überprüfen.</listItem>
+  </list>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzugsplaner/umzug/r121/r1211/einzug/12115.jsp">
+    Informationen zum Umzugstag
+  </link>
 </removalTipItem>
 <removalTipItem type="sped" order="1">
-  <headline>  Neue Namensschilder anbringen
-    Sofern nicht von der Umzugsfirma erledigt, Möbel etc. zusammenbauen und anschrauben
-    Müll umweltgerecht entsorgen</headline>
+  <headline>Nach dem Umzug - Tag 1</headline>
+  <list>
+    <listItem>Neue Namensschilder anbringen.</listItem>
+    <listItem>Sofern nicht von der Umzugsfirma erledigt, Möbel etc. zusammenbauen und anschrauben.</listItem>
+    <listItem>Müll umweltgerecht entsorgen.</listItem>
+  </list>
 </removalTipItem>
 <removalTipItem type="sped" order="2">
-  <headline>+Geliehenes Verpackungsmaterial und Werkzeug zurückgeben
-    +Gegebenenfalls restliche Möbel aufbauen
-    +Vor(!) den allerletzten Schönheitskorrekturen in der neuen Wohnung: Einweihungsparty machen</headline>
+  <headline>Nach dem Umzug - Tag 2</headline>
+  <list>
+    <listItem>Geliehenes Verpackungsmaterial und Werkzeug zurückgeben.</listItem>
+    <listItem>Gegebenenfalls restliche Möbel aufbauen.</listItem>
+    <listItem>Vor(!) den allerletzten Schönheitskorrekturen in der neuen Wohnung: Einweihungsparty machen.</listItem>
+  </list>
 </removalTipItem>
 <removalTipItem type="sped" order="12">
-  <headline>Um anderen Umziehenden die Entscheidung zu erleichtern: Bewerten Sie Ihre Umzugsfirma</headline>
+  <headline>Bewertung</headline>
+  <text>Um anderen Umziehenden die Entscheidung zu erleichtern: Bewerten Sie Ihre Umzugsfirma.</text>
+  <link type="extern" href="http://redirect.immobilienscout24.de/servlet/redirect?ref=%2Fde%2Fsnippets%2Fumzug%2Fmein-umzugsplaner%2Fsnippet.xml&#38;location=http%3A%2F%2Fwww.umzugsfirmen-check.de%2F">
+    Eigene Umzugsfirma bewerten
+  </link> 
 </removalTipItem>
 <removalTipItem type="own" order="-31">
-  <headline>Umzugshelfer suchen und verpflichten</headline>
+  <headline>Helfer suchen</headline>
+  <text>Umzugshelfer suchen und verpflichten.</text>
 </removalTipItem>
 <removalTipItem type="own" order="-28">
-  <headline>Umzugswagen besorgen (ggf. Fahrer mit entsprechenden Führerschein suchen)</headline>
+  <headline>Umzugswagen</headline>
+  <text>Umzugswagen besorgen (ggf. Fahrer mit entsprechenden Führerschein suchen).</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzug-eigenregie/transporter/index.jsp">
+    Hier passende Mietwagen-Angebote finden
+  </link>
 </removalTipItem>
 <removalTipItem type="own" order="-16">
-  <headline>Chance nutzen und bestehenden Haushalt entrümpeln</headline>
+  <headline>Entrümpeln</headline>
+  <text>Chance nutzen und bestehenden Haushalt entrümpeln.</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzug-eigenregie/lagerraum/index-alt.jsp">
+    Sie benötigen Lagerraum für Ihre Möbel? Jetzt mieten.
+  </link>
 </removalTipItem>
 <removalTipItem type="own" order="-13">
-  <headline>Sondergehnemigung für Parkplatzabsperrung am alten und neuen Wohnort beantragen</headline>
+  <headline>Parkplatzabsperrung</headline>
+  <text>Sondergehnemigung für Parkplatzabsperrung am alten und neuen Wohnort beantragen.</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzug-eigenregie/halteverbotszonen.jsp">
+    Halteverbotszonen online bestellen
+  </link>
 </removalTipItem>
 <removalTipItem type="own" order="-10">
   <headline>Möbel abbauen</headline>
 </removalTipItem>
 <removalTipItem type="own" order="-9">
   <headline>Die ersten Kartons packen</headline>
+  <text>Persönlicher Bedarf, Medikamente, Kulturbeutel, Wäsche und Ähnliches getrennt verpacken.</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzugsplaner/umzug/r122/R1222/r12221/12221.jsp">
+    Tipps zum richtigen Einpacken
+  </link>
 </removalTipItem>
 <removalTipItem type="own" order="-7">
   <headline>Umzugshelfer erinnern</headline>
 </removalTipItem>
 <removalTipItem type="own" order="-2">
-  <headline>+Restliche Kartons packen
-    +Schränke für den Transport sichern (z.B. Schubladen verkleben)
-    +Kühlschrank/Tiefkühltruhe abtauen und reinigen
-    +Treppenhaus der alten und neuen Wohnung auf Vorschäden überprüfen (gegebenenfalls dokumentieren)</headline>
+  <headline>Noch 2 Tage bis zum Umzug</headline>
+  <list>
+    <listItem>Restliche Kartons packen.</listItem>
+    <listItem>Schränke für den Transport sichern (z.B. Schubladen verkleben).</listItem>
+    <listItem>Kühlschrank/Tiefkühltruhe abtauen und reinigen.</listItem>
+    <listItem>Treppenhaus der alten und neuen Wohnung auf Vorschäden überprüfen (gegebenenfalls dokumentieren).</listItem>
+  </list>
 </removalTipItem>
 <removalTipItem type="own" order="-1">
-  <headline>+Gegebenenfalls schon erste Transporte zur neuen Wohnung mit dem eigenem PKW durchführen (wenn vorhanden)
-    +Pflanzen noch einmal leicht gießen und Blumentöpfe mit Folie verpacken
-    +Alle Namensschilder im alten Wohnhaus entfernen (Wohnungstür, Briefkasten, Klingel)
-    +Fotos vom Leerzustand der neuen Wohnung machen, Mängel dokumentieren
-    +Möbelstellplan in jedem Raum der neuen Wohnung aufhängen
-    +Glühbirnen in der neuen Wohnung installieren</headline>
+  <headline>Noch 1 Tag bis zum Umzug</headline>
+  <list>
+    <listItem>Gegebenenfalls schon erste Transporte zur neuen Wohnung mit dem eigenem PKW durchführen (wenn vorhanden).</listItem>
+    <listItem>Pflanzen noch einmal leicht gießen und Blumentöpfe mit Folie verpacken.</listItem>
+    <listItem>Alle Namensschilder im alten Wohnhaus entfernen (Wohnungstür, Briefkasten, Klingel).</listItem>
+    <listItem>Fotos vom Leerzustand der neuen Wohnung machen, Mängel dokumentieren.</listItem>
+    <listItem>Möbelstellplan in jedem Raum der neuen Wohnung aufhängen.</listItem>
+    <listItem>Glühbirnen in der neuen Wohnung installieren.</listItem>
+  </list>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzugsplaner/umzug/r122/R1223/r12231/12231.jsp">
+    Tipps zum Erstellen eines Möbelstellplans
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/mietertipps/muster/wohnungsuebergabeprotokoll/index.jsp">
+   Musterprotokoll Wohnungsübergabe
+  </link>
 </removalTipItem>
 <removalTipItem type="own" order="0">
   <headline>Heute ziehen Sie um - Folgendes ist zu erledigen:</headline>
+  <list>
+    <listItem>Essen und Trinken für Ihre Umzugshelfer bereithalten.</listItem>
+    <listItem>Ausreichend Reinigungsmittel, Mülltüten und eine Grundausstattung an erste Hilfe Utensilien (u.a. Pflaster) bereithalten.</listItem>
+    <listItem>Umzugshelfer einweisen.</listItem>
+    <listItem> LKW beladen und nicht unbeaufsichtigt lassen.</listItem>
+    <listItem>Fußböden der neuen Wohnung, wie Teppiche und Parkett zum Schutz abdecken.</listItem>
+    <listItem>Unterlagen, Wertgegenstände und persönlicher Bedarf selbst in die neue Wohnung transportieren.</listItem>
+    <listItem>In der neuen Wohnung zuerst die Möbel platzieren, anschließend die Kartons.</listItem>
+    <listItem>Treppenhaus des alten und neuen Wohnhauses reinigen und auf Schäden überprüfen.</listItem>
+  </list>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/ratgeber/umzugsplaner/auszug/beladen-fahren.jsp">
+    Infos zum Beladen und Fahren
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/ratgeber/umzugsplaner/auszug/umzugskleidung.jsp">
+    Passende Kleidung und richtiges Tragen
+  </link>
 </removalTipItem>
 <removalTipItem type="own" order="1">
-  <headline>Neue Namensschilder anbringen
-    Alle Möbel etc. zusammenbauen und anschrauben
-    Müll umweltgerecht entsorgen</headline>
+  <headline>Nach dem Umzug - Tag 1</headline>
+  <list>
+    <listItem>Neue Namensschilder anbringen.</listItem>
+    <listItem>Alle Möbel etc. zusammenbauen und anschrauben.</listItem>
+    <listItem>Müll umweltgerecht entsorgen.</listItem>
+  </list>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umbau/handwerker/index.jsp">
+    Passende Handwerker finden Sie hier
+  </link>
 </removalTipItem>
 <removalTipItem type="own" order="2">
-  <headline>Geliehenes Verpackungsmaterial und Werkzeug zurückgeben
-    Restliche Möbel aufbauen
-    Vor(!) den allerletzten Schönheitskorrekturen in der neuen Wohnung: Einweihungsparty machen</headline>
+  <headline>Nach dem Umzug - Tag 2</headline>
+  <list>
+    <listItem>Geliehenes Verpackungsmaterial und Werkzeug zurückgeben.</listItem>
+    <listItem>Restliche Möbel aufbauen.</listItem>
+    <listItem>Vor(!) den allerletzten Schönheitskorrekturen in der neuen Wohnung: Einweihungsparty machen.</listItem>
+  </list>
 </removalTipItem>
 <removalTipItem type="common" order="-89">
-  <headline>Alte Wohnung kündigen und gegebenenfalls einen Nachmieter suchen</headline>
+  <headline>Alte Wohnung</headline>
+  <text>Alte Wohnung kündigen und gegebenenfalls einen Nachmieter suchen</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/ratgeber/mietvertrag/mieterkuendigung.jsp">
+    Regelungen zur Mieterkündigung
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/mietertipps/muster/musterbrief_kuendigung/index.jsp">
+    Musterbrief Kündigung
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/de/anbieten/immobilien-inserieren.jsp">
+    Nachmieter suchen
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-87">
-  <headline>Mietvertrag der neuen Wohnung unterschreiben</headline>
+  <headline>Mietvertrag</headline>
+  <text>Mietvertrag der neuen Wohnung unterschreiben</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/ratgeber/mietvertrag/mietvertrags-arten.jsp">
+    Infos rund um den Mietvertrag
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-85">
-  <headline>Kaution der alten Wohnung zurückfordern</headline>
+  <headline>Kaution</headline>
+  <text>Kaution der alten Wohnung zurückfordern</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/mietertipps/miete/ratgdmbd10232.jsp">
+    Infos zur Mietkaution
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-83">
-  <headline>Kostenplan für den gesamten Umzug erstellen</headline>
+  <headline>Kostenplan</headline>
+  <text>Kostenplan für den gesamten Umzug erstellen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-79">
-  <headline>Gegebenenfalls neue Möbel bestellen und deren Lieferfristen beachten</headline>
+  <headline>Möbel bestellen</headline>
+  <text>Gegebenenfalls neue Möbel bestellen und deren Lieferfristen beachten</text>
 </removalTipItem>
 <removalTipItem type="common" order="-76">
-  <headline>Liste mit gesamten Umzugsgut erstellen</headline>
+  <headline>Umzugsgutliste</headline>
+  <text>Liste mit gesamten Umzugsgut erstellen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-69">
-  <headline>Anfallende Arbeiten in alter Wohnung (Renovierung z.B. laut Mietvertrag) notieren</headline>
+  <headline>Alte Wohnung</headline>
+  <text>Anfallende Arbeiten in alter Wohnung (Renovierung z.B. laut Mietvertrag) notieren.</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/ratgeber/renovierung-modernisierung/urteile.jsp">
+    Alles zum Thema Schönheitsreparaturen
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-59">
-  <headline>Sicht-Kontrolle von TV-, Telefon- und anderen Anschlüssen in der neuen Wohnung</headline>
+  <headline>Anschlusskontrolle</headline>
+  <text>Sicht-Kontrolle von TV-, Telefon- und anderen Anschlüssen in der neuen Wohnung.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-54">
   <headline>Ummelden:</headline>
+  <list>
+    <listItem>Telefon</listItem>
+    <listItem>Internet</listItem>
+    <listItem>Strom</listItem>
+    <listItem>Gas</listItem>
+    <listItem>Hausratversicherung</listItem>
+    <listItem>Haftpflichtversicherung</listItem>
+    <listItem>GEZ</listItem>
+    <listItem>Kabelfernsehen</listItem>
+    <listItem>Kindergarten</listItem>
+    <listItem>Schule</listItem>
+    <listItem>Abonnements</listItem>
+    <listItem>Vereine</listItem>
+  </list>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/ummelden/telefon/ratgdl0212/index.jsp">
+    Infos zum Thema Internet
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/ummelden/strom_gas/ratgdl120/index.jsp">
+    Was bringt ein Stromwechsel?
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzugsplaner/auszug/r113/r113_6/1136.jsp">
+    Informationen zur Ummeldung von Vereinen und MitgliedschaftenHier neue Anbieter in Ihrer Region finden
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/Lead/Portal/Anmelden">
+    Hier neue Anbieter in Ihrer Region finden
+  </link>
+  <link type="extern" href="http://redirect.immobilienscout24.de/servlet/redirect?ref=%2Fde%2Fsnippets%2Fumzug%2Fmein-umzugsplaner%2Fsnippet.xml&#38;location=https%3A%2F%2Feinfach-ummelden.de%2F">
+    Adresse bequem online ummelden
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-51">
-  <headline>Sonderurlaub/Umzugstage beantragen und über eventuelle Zuschüsse informieren</headline>
+  <headline>Urlaubstage</headline>
+  <text>Sonderurlaub/Umzugstage beantragen und über eventuelle Zuschüsse informieren.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-49">
-  <headline>Handwerker (Maler, Elektriker etc.) engagieren</headline>
+  <headline>Handwerker</headline>
+  <text>Handwerker (Maler, Elektriker etc.) engagieren</text>
+  <link type="intern" href="http://www.immobilienscout24.de/Lead/Start/Maler">
+    Hier Maler in Ihrer Region finden
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umbau/handwerker/index.jsp">
+    Weitere Handwerker beauftragen
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-48">
-  <headline>Kaution für neue Wohnung hinterlegen - gegebenenfalls Kautionskonto eröffnen</headline>
+  <headline>Kaution</headline>
+  <text>Kaution für neue Wohnung hinterlegen - gegebenenfalls Kautionskonto eröffnen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-44">
-  <headline>Renovierung neue Wohnung planen, Wohnung vermessen</headline>
+  <headline>Renovierung</headline>
+  <text>Renovierung neue Wohnung planen, Wohnung vermessen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-39">
-  <headline>Einzugsermächtigungen bearbeiten (neue Miete, alte Miete, Adressen, Bankverbindungen etc.)</headline>
+  <headline>Einzugsermächtigungen</headline>
+  <text>Einzugsermächtigungen bearbeiten (neue Miete, alte Miete, Adressen, Bankverbindungen etc.).</text>
 </removalTipItem>
 <removalTipItem type="common" order="-34">
-  <headline>Ausmessen des alten und neuen Treppenhauses</headline>
+  <headline>Treppenhaus</headline>
+  <text>Ausmessen des alten und neuen Treppenhauses</text>
 </removalTipItem>
 <removalTipItem type="common" order="-32">
-  <headline>Sicherheitskopien von den wichtigsten Dokumenten anfertigen</headline>
+  <headline>Sicherheitskopien</headline>
+  <text>Sicherheitskopien von den wichtigsten Dokumenten anfertigen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-30">
   <headline>Ummelden:</headline>
+  <list>
+    <listItem>Banken/Sparkasse</listItem>
+    <listItem>Sonstige Kreditinstitute</listItem>
+    <listItem>Kindergeldkasse</listItem>
+    <listItem>Krankenversicherung</listItem>
+  </list>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzugsplaner/auszug/r113/r113_3/1133.jsp">
+    Informationen zum Ummelden bei Banken und Sparkassen
+  </link>
+  <link type="extern" href="http://redirect.immobilienscout24.de/servlet/redirect?ref=%2Fde%2Fsnippets%2Fumzug%2Fmein-umzugsplaner%2Fsnippet.xml&#38;location=https%3A%2F%2Feinfach-ummelden.de%2F">
+    Adresse bequem online ummelden
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-29">
-  <headline>Sperrmülltermin machen</headline>
+  <headline>Sperrmüll</headline>
+  <text>Sperrmülltermin machen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-27">
-  <headline>Wohnungsübergabe und Abstandszahlung mit Nachmieter schriftlich klären</headline>
+  <headline>Wohnungsübergabe</headline>
+  <text>Wohnungsübergabe und Abstandszahlung mit Nachmieter schriftlich klären.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-26">
-  <headline>Zählerstandablesung vereinbaren</headline>
+  <headline>Zählerstand</headline>
+  <text>Zählerstandablesung vereinbaren.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-25">
-  <headline>Heizkostenabrechnung mit dem alten Vermieter klären</headline>
+  <headline>Heizkostenabrechnung</headline>
+  <text>Heizkostenabrechnung mit dem alten Vermieter klären.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-24">
-  <headline>Kinderbetreuung und Haustierplatz für den Umzugstag klären</headline>
+  <headline>Kinder und Haustiere</headline>
+  <text>Kinderbetreuung und Haustierplatz für den Umzugstag klären.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-23">
-  <headline>Wohnungssschlüssel für die neue Wohnung besorgen (und duplizieren)</headline>
+  <headline>Wohnungssschlüssel</headline>
+  <text>Wohnungssschlüssel für die neue Wohnung besorgen (und duplizieren).</text>
 </removalTipItem>
 <removalTipItem type="common" order="-22">
-  <headline>Neue Wohnung renovieren/bezugsfertig machen</headline>
+  <headline>Renovieren</headline>
+  <text>Neue Wohnung renovieren/bezugsfertig machen.</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umbau/innenausbau/wand_decke/ratgbscodl0134/ratgdl0191.jsp">
+    Tapetenrechner
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umbau/innenausbau/boeden/ratgdl0216.jsp">
+    Bodenrechner
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/Lead/Start/Fachhandel-Dienstleister">
+    Hier Baumarkt in Ihrer Region finden
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-21">
-  <headline>Möbelstellplan für neue Wohnung erstellen</headline>
+  <headline>Möbelstellplan</headline>
+  <text>Möbelstellplan für neue Wohnung erstellen.</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzugsplaner/umzug/r122/R1223/r12231/12231.jsp">
+    Tipps zum Erstellen eines Möbelstellplans
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-20">
-  <headline>Wohnungsübergabetermin für die alte Wohnung mit dem Vermieter vereinbaren</headline>
+  <headline>Wohnungsübergabetermin</headline>
+  <text>Wohnungsübergabetermin für die alte Wohnung mit dem Vermieter vereinbaren.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-19">
-  <headline>Alte und neue Nachbarn über Ein- beziehungsweise Auszug informieren</headline>
+  <headline>Nachbarn</headline>
+  <text>Alte und neue Nachbarn über Ein- beziehungsweise Auszug informieren.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-18">
-  <headline>Stadtplan und wichtige Adressen/ Telefonnummern des neuen Wohnorts besorgen</headline>
+  <headline>Neuer Wohnort</headline>
+  <text>Stadtplan und wichtige Adressen/ Telefonnummern des neuen Wohnorts besorgen.</text>
+  <link type="extern" href="http://redirect.immobilienscout24.de/servlet/redirect?ref=%2Fde%2Fsnippets%2Fumzug%2Fmein-umzugsplaner%2Fsnippet.xml&#38;location=http%3A%2F%2Fwww.meine-nachbarschaft.de">
+    Neue Nachbarschaft erkunden
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-17">
-  <headline>Hilfsmittel für Ihren Umzug besorgen: Umzugs- und Bücherkartons, Aufkleber für Kartons, Luftpolsterfolie, Packpapier, Klebeband, Möbeldecken, Malervlies</headline>
+  <headline>Umzugshilfmittel</headline>
+  <text>Hilfsmittel für Ihren Umzug besorgen: Umzugs- und Bücherkartons, Aufkleber für Kartons, Luftpolsterfolie, Packpapier, Klebeband, Möbeldecken, Malervlies.</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzug-eigenregie/umzugskartons/index.jsp">
+    Hier Umzugskartons bestellen
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/Lead/Start/Fachhandel-Dienstleister">
+    Hier den Baumarkt in Ihrer Region finden
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="-15">
-  <headline>Teppiche und Gardinen reinigen und gegebenenfalls den neuen Maßen anpassen lassen</headline>
+  <headline>Teppiche und Gardinen</headline>
+  <text>Teppiche und Gardinen reinigen und gegebenenfalls den neuen Maßen anpassen lassen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-14">
-  <headline>Lebensmittelvorräte aufbrauchen (Tiefkühlkost und Dauervorräte)</headline>
+  <headline>Lebensmittel</headline>
+  <text>Lebensmittelvorräte aufbrauchen (Tiefkühlkost und Dauervorräte).</text>
 </removalTipItem>
 <removalTipItem type="common" order="-12">
-  <headline>Keller, Garage und Abstellräume ausräumen und konsequent ausmisten</headline>
+  <headline>Keller, Garage und Abstellräume</headline>
+  <text>Keller, Garage und Abstellräume ausräumen und konsequent ausmisten</text>
 </removalTipItem>
 <removalTipItem type="common" order="-11">
   <headline>Termine bestätigen</headline>
+   <text>Z.B. Umzugsdatum für Helfer, Termine mit Handwerkern.</text>
 </removalTipItem>
 <removalTipItem type="common" order="-5">
-  <headline>Werkzeugkiste zusammenstellen</headline>
+  <headline>Werkzeugkiste</headline>
+  <text>Werkzeugkiste zusammenstellen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="3">
   <headline>Renovierung alte Wohnung</headline>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umbau/innenausbau/wand_decke/ratgbscodl0134/index.jsp">
+    Fachmännisch tapezieren
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umbau/innenausbau/wand_decke/ratgbscodl0194/index.jsp">
+    Richtig streichen
+  </link>
+  <link type="intern" href="http://www.immobilienscout24.de/Lead/Start/Fachhandel-Dienstleister">
+    Hier den Baumarkt in Ihrer Region finden
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="4">
   <headline>Ummelden:</headline>
+  <list>
+    <listItem>Einwohnermeldeamt (bis eine Woche nach dem Umzug)</listItem>
+    <listItem>Finanzamt (wenn neue Stadt)</listItem>
+    <listItem>KfZ-Versicherung</listItem>
+    <listItem>Auto beim Straßenverkehrsamt</listItem>
+  </list>
+  <link type="intern" href="http://www.immobilienscout24.de/Lead/Portal/Aemter">
+    Finden Sie hier Ämter in Ihrer Region
+  </link>
+  <link type="extern" href="http://redirect.immobilienscout24.de/servlet/redirect?ref=%2Fde%2Fsnippets%2Fumzug%2Fmein-umzugsplaner%2Fsnippet.xml&#38;location=https%3A%2F%2Feinfach-ummelden.de%2F">
+    Melden Sie hier Ihre Versicherung bequem online um
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="5">
-  <headline>Wohnungsübergabe: Übergabeprotokolle ausfüllen und Schlüsselübergabe quittieren lassen</headline>
+  <headline>Wohnungsübergabe</headline>
+  <text>Übergabeprotokolle ausfüllen und Schlüsselübergabe quittieren lassen.</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/mietertipps/muster/wohnungsuebergabeprotokoll/index.jsp">
+    Musterprotokoll Wohnungsübergabe
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="6">
-  <headline>Neue Wohnung aufräumen: was jetzt stehenbleibt, bleibt es vielleicht für immer</headline>
+  <headline>Aufräumen</headline>
+  <text>Neue Wohnung aufräumen: was jetzt stehenbleibt, bleibt es vielleicht für immer.</text>
 </removalTipItem>
 <removalTipItem type="common" order="7">
-  <headline>Hausapotheke überprüfen, ggf. ergänzen</headline>
+  <headline>Hausapotheke</headline>
+  <text>Hausapotheke überprüfen, ggf. ergänzen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="9">
-  <headline>Bankkonto am neuen Wohnort eröffnen</headline>
+  <headline>Bankkonto</headline>
+  <text>Bankkonto am neuen Wohnort eröffnen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="10">
-  <headline>Kostenbelege für Abrechnungen/Steuer sortieren</headline>
+  <headline>Kostenbelege</headline>
+  <text>Kostenbelege für Abrechnungen/Steuer sortieren.</text>
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/ratgeber/umzugsplaner/einzug/umzug-steuern-sparen.jsp">
+    Steuern sparen beim Umzug
+  </link>
 </removalTipItem>
 <removalTipItem type="common" order="11">
-  <headline>Freunde/Bekannte über neue Adresse informieren</headline>
+  <headline>Freunde und Bekannte</headline>
+  <text>Freunde und Bekannte über neue Adresse informieren.</text>
 </removalTipItem>
 <removalTipItem type="common" order="13">
-  <headline>Freunde zum Essen einladen</headline>
+  <headline>Festessen</headline>
+  <text>Freunde zum Essen einladen.</text>
 </removalTipItem>
 <removalTipItem type="common" order="14">
-  <headline>Die neue Umgebung kennenlernen</headline>
+  <headline>Neue Umgebung</headline>
+  <text>Die neue Umgebung kennenlernen</text>
+  <link type="extern" href="http://redirect.immobilienscout24.de/servlet/redirect?ref=%2Fde%2Fsnippets%2Fumzug%2Fmein-umzugsplaner%2Fsnippet.xml&#38;location=http%3A%2F%2Fwww.meine-nachbarschaft.de">
+    Neue Nachbarschaft erkunden
+  </link>
 </removalTipItem>
 </items>

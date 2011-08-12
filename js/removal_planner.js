@@ -103,7 +103,7 @@ UMZUGSPLANER.compute = (function () {
           item_date = new Date(removal_date.getTime() + order*day_milli_sec),
           removal_week_end = new Date(removal_date.getTime() + week_milli_sec),
           tip = $(xml).find('removalTipItem[type="'+removal_type+'"][order="'+order+'"] headline'),
-          item_date_out = (item_date.getTime() < new Date().getTime() ? "baldm&#246;glichst" : item_date.toLocaleDateString());
+          item_date_out = (item_date.getTime() < new Date().getTime() - day_milli_sec ? "baldm&#246;glichst" : item_date.toLocaleDateString());
     /*var end = new Date().getTime();
     var time = end - start;
     console.log('Execution time: ' + time);*/
@@ -128,7 +128,6 @@ UMZUGSPLANER.compute = (function () {
       }
 
     }
-    console.log($('#tab1 .scroll-pane'));
     $('.scroll-pane .tips').html("");
     $('#tab1 .scroll-pane .tips').append(html_tab1.join(""));
     $('#tab2 .scroll-pane .tips').append(html_tab2.join(""));
