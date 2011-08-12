@@ -29,13 +29,27 @@
     +Treppenhaus der alten und neuen Wohnung auf Vorschäden überprüfen (gegebenenfalls dokumentieren)</headline>
 </removalTipItem>
 <removalTipItem type="sped" order="-1">
-  <headline>Angebote von Umzugsfirmen einholen</headline>
+  <headline>    +Pflanzen noch einmal leicht gießen und Blumentöpfe mit Folie verpacken
+    +Alle Namensschilder im alten Wohnhaus entfernen (Wohnungstür, Briefkasten, Klingel)Fotos vom Leerzustand der neuen Wohnung machen, Mängel dokumentieren
+    +Möbelstellplan in jedem Raum der neuen Wohnung aufhängen
+    +Glühbirnen in der neuen Wohnung installieren</headline>
 </removalTipItem>
 <removalTipItem type="sped" order="0">
-  <headline>Angebote von Umzugsfirmen einholen</headline>
+  <headline>Heute ziehen Sie um - Folgendes ist zu erledigen:
+   Genau lesen, was den Möbelpackern unterschrieben wird
+    Komplette Liste aller zu transportierenden Gegenstände erstellen lassen
+    Neben dem Rechnungsbetrag auch Essen und Trinkgeld für die Umzugsfirma bereithalten
+    Ausreichend Reinigungsmittel, Mülltüten und eine Grundausstattung an erste Hilfe Utensilien (u.a. Pflaster) bereitstellen
+    Gegebenenfalls Umzugshelfer einweisen
+    Unterlagen, Wertgegenstände und persönlicher Bedarf selbst in die neue Wohnung transportieren
+    Fußböden der neuen Wohnung, wie Teppiche und Parkett zum Schutz abdecken (lassen)
+    Gegebenenfalls Schäden protokollieren und die Unterschrift der Umzugsfirma einholen
+    Treppenhaus des alten und neuen Wohnhauses reinigen und auf Schäden überprüfen</headline>
 </removalTipItem>
 <removalTipItem type="sped" order="1">
-  <headline>Angebote von Umzugsfirmen einholen</headline>
+  <headline>  Neue Namensschilder anbringen
+    Sofern nicht von der Umzugsfirma erledigt, Möbel etc. zusammenbauen und anschrauben
+    Müll umweltgerecht entsorgen</headline>
 </removalTipItem>
 <removalTipItem type="sped" order="2">
   <headline>+Geliehenes Verpackungsmaterial und Werkzeug zurückgeben

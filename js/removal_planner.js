@@ -10,9 +10,7 @@ UMZUGSPLANER.compute = (function () {
       html_tab1 = [],
       html_tab2 = [],
       html_tab3 = [],
-      html_tab4 = [],
-      my_datepicker,
-      scollbar_set = false;
+      html_tab4 = [];
   function createPDF() {
     var doc = new jsPDF(),
         pdf_data,
@@ -75,7 +73,8 @@ UMZUGSPLANER.compute = (function () {
     showMonthAfterYear: false,
     yearSuffix: ''};
     $.datepicker.setDefaults($.datepicker.regional['de']);
-    my_datepicker = $( "#datepicker" ).datepicker();
+    $('#datepicker').datepicker({ minDate: new Date() });
+    $('#datepicker').datepicker("setDate", new Date($("#datepicker").val()) );
   }
   function setTabData (xml, removal_type, removal_date) {
     var common_items = $(xml).find('removalTipItem[type="common"]'),
@@ -103,7 +102,8 @@ UMZUGSPLANER.compute = (function () {
       var order = merged_items_time[i], 
           item_date = new Date(removal_date.getTime() + order*day_milli_sec),
           removal_week_end = new Date(removal_date.getTime() + week_milli_sec),
-          tip = $(xml).find('removalTipItem[type="'+removal_type+'"][order="'+order+'"] headline');
+          tip = $(xml).find('removalTipItem[type="'+removal_type+'"][order="'+order+'"] headline'),
+          item_date_out = (item_date.getTime() < new Date().getTime() ? "baldm&#246;glichst" : item_date.toLocaleDateString());
     /*var end = new Date().getTime();
     var time = end - start;
     console.log('Execution time: ' + time);*/
@@ -112,7 +112,7 @@ UMZUGSPLANER.compute = (function () {
       } else {
         tip = $(xml).find('removalTipItem[type="common"][order="'+order+'"] headline').text();
       }
-      html_tab1[i] = "<div class=\"time\">"+item_date.toLocaleDateString()+"</div>"
+      html_tab1[i] = "<div class=\"time\">"+item_date_out+"</div>"
                       +"<div class=\"tip\">"+tip+"</div>";
       if (item_date < removal_date) {
         ++i2;
@@ -145,7 +145,8 @@ UMZUGSPLANER.compute = (function () {
     });
   }  
   function initEventshandler() {
-    $('#rem_plann_form').submit(function() {
+    $('#rem_plann_form').submit(function(event) {
+      event.preventDefault();
       var removal_type = $('input:radio[name="removal_type"]:checked').val();
       var datepicker_date = $( "#datepicker" ).datepicker("getDate" );
       if(datepicker_date !== null) {
