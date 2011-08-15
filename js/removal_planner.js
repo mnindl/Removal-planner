@@ -76,6 +76,39 @@ UMZUGSPLANER.compute = (function () {
     $('#datepicker').datepicker({ minDate: new Date() });
     $('#datepicker').datepicker("setDate", new Date($("#datepicker").val()) );
   }
+  function getTip(xml, order, removal_type) {
+    var tip,
+        headline,
+        $tip = $(xml).find('removalTipItem[type="'+removal_type+'"][order="'+order+'"]');
+    if ($tip.size() < 1) {
+      $tip = $(xml).find('removalTipItem[type="common"][order="'+order+'"]');
+    }
+    headline = $tip.find('headline').text();
+    tip = "<h3 class=\"headline\">"+headline+"</h3>";
+    if ($text = $tip.find('text'), $text.size() >= 1) {
+      tip += "<p class=\"text\">"+$text.text()+"</p>";
+    }
+    if ($list = $tip.find('list'), $list.size() >=1) {
+      tip += "<ul class=\"list\">";
+      $list_items = $list.find('listItem');
+      $list_items.each(function(){
+        tip += "<li class=\"list_item\">"+$(this).text()+"</li>";
+      });
+      tip += "</ul>";
+    }
+    if ($links = $tip.find('link'), $links.size() >= 1) {
+      tip += "<div class=\"link_list\">";
+      $links.each(function(){
+        var $this = $(this);
+        tip += "<a class=\""+$this.attr('type')+"\"href=\""+$this.attr('href')+"\">"
+                +$this.text()
+                +"</a>";
+      });
+      tip += "</div>"
+    }
+    
+    return tip;
+  }
   function setTabData (xml, removal_type, removal_date) {
     var common_items = $(xml).find('removalTipItem[type="common"]'),
         removal_type_items = $(xml).find('removalTipItem[type="'+removal_type+'"]'),
@@ -102,16 +135,11 @@ UMZUGSPLANER.compute = (function () {
       var order = merged_items_time[i], 
           item_date = new Date(removal_date.getTime() + order*day_milli_sec),
           removal_week_end = new Date(removal_date.getTime() + week_milli_sec),
-          tip = $(xml).find('removalTipItem[type="'+removal_type+'"][order="'+order+'"] headline'),
+          tip = getTip(xml, order, removal_type),
           item_date_out = (item_date.getTime() < new Date().getTime() - day_milli_sec ? "baldm&#246;glichst" : item_date.toLocaleDateString());
     /*var end = new Date().getTime();
     var time = end - start;
     console.log('Execution time: ' + time);*/
-      if (tip.size() >= 1) {
-        tip = tip.text();
-      } else {
-        tip = $(xml).find('removalTipItem[type="common"][order="'+order+'"] headline').text();
-      }
       html_tab1[i] = "<div class=\"time\">"+item_date_out+"</div>"
                       +"<div class=\"tip\">"+tip+"</div>";
       if (item_date < removal_date) {

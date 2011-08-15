@@ -18,4 +18,13 @@
 position: relative;
 overflow: hidden;
 z-index: 1;
-} 
+}
+#removal_planner .tips {
+  overflow: hidden;
+}
+#removal_planner .time,
+#removal_planner .tip {
+  float: left;
+  width: 50%;
+  margin-bottom: 30px;
+}
