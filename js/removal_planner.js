@@ -6,52 +6,13 @@ google.load("jqueryui", "1.8.14");
 if (!window.UMZUGSPLANER) { var UMZUGSPLANER = {}; }
 
 UMZUGSPLANER.compute = (function () {
-  var pdfTab = [],
-      html_tab1 = [],
-      html_tab2 = [],
-      html_tab3 = [],
-      html_tab4 = [];
-  function createPDF() {
-    var doc = new jsPDF(),
-        pdf_data,
-        n,
-        pdf_row = 40;
-    doc.setFontSize(22);
-    doc.text(20, 20, "Umzugsplan by ImmoScout24");
-    doc.setFontSize(16);
-    doc.text(20, 30, 'Datum');
-    // test
-    doc.drawLine(100, 100, 100, 120, 1.0, 'dashed');
-    doc.text(80, 30, 'Aufgabe');
-    doc.setFontSize(14);
-    switch(pdfTab)
-    {
-    case "html_tab1":
-      pdf_data = html_tab1;
-      break;
-    case "html_tab2":
-      pdf_data = html_tab2;
-      break;
-    case "html_tab3":
-      pdf_data = html_tab3;
-      break;
-    case "html_tab4":
-      pdf_data = html_tab4;
-      break;
-    }
-    for (var i = -1, n = pdf_data.length; ++i < n;) {
-      var time = pdf_data[i].slice(pdf_data[i].indexOf('time') + 6, pdf_data[i].indexOf('<\/div>'));
-      var tip = pdf_data[i].slice(pdf_data[i].indexOf('tip') + 5, pdf_data[i].lastIndexOf('<\/div>'));
-      doc.text(20, pdf_row, time);
-      doc.text(80, pdf_row, tip);
-      pdf_row += 10;
-      if (pdf_row === 250) {
-        doc.addPage();
-        pdf_row = 20;
-      }
-    }
-    // Output as Data URI
-    doc.output('datauri');
+  var currentTab,
+      removal_date,
+      removal_type;
+  function createPDF3() {
+    console.log(removal_date.getTime());
+    location.href="http://pdf.umzugskalender.de/MichasTest/test.php?currentTab="
+                  +currentTab+"&removal_date="+Math.round((removal_date.getTime()) / 1000)+"&removal_type="+removal_type;
   }
   function initDatePicker() {
     $.datepicker.regional['de'] = {
@@ -115,13 +76,17 @@ UMZUGSPLANER.compute = (function () {
         removal_type_items_time = [],
         common_items_time = [],
         merged_items_time,
-        merged_items_time_size,
         day_milli_sec = 24*60*60*1000,
         week_milli_sec = 7*24*60*60*1000,
         n,
         i2 = -1,
         i3 = -1,
-        i4 = -1;
+        i4 = -1,
+        html_tab1 = [],
+        html_tab2 = [],
+        html_tab3 = [],
+        html_tab4 = [];
+    console.log(day_milli_sec*10000000);
     for (var i = -1, n = removal_type_items.length; ++i < n;) {
       removal_type_items_time[i] = Number($(removal_type_items[i]).attr('order'));
     }
@@ -130,7 +95,7 @@ UMZUGSPLANER.compute = (function () {
     }
     merged_items_time = removal_type_items_time.concat(common_items_time);
     merged_items_time.sort(function(a,b){return a - b});
-    for ( var i = -1, n = merged_items_time.length; ++i < n;) {
+    for (var i = -1, n = merged_items_time.length; ++i < n;) {
      // var start = new Date().getTime();
       var order = merged_items_time[i], 
           item_date = new Date(removal_date.getTime() + order*day_milli_sec),
@@ -140,7 +105,7 @@ UMZUGSPLANER.compute = (function () {
     /*var end = new Date().getTime();
     var time = end - start;
     console.log('Execution time: ' + time);*/
-      html_tab1[i] = "<div class=\"time\">"+item_date_out+"</div>"
+      html_tab1[i] = "<div class=\"time\">"+item_date_out+"  nr="+i+"</div>"
                       +"<div class=\"tip\">"+tip+"</div>";
       if (item_date < removal_date) {
         ++i2;
@@ -166,7 +131,7 @@ UMZUGSPLANER.compute = (function () {
   function initTabs() {
     $('#tabs').tabs( {
       show: function(ev, ui) {
-        pdfTab = "html_"+ui.panel.id;
+        currentTab = ui.panel.id;
         $("#"+ui.panel.id+" .scroll-pane").jScrollPane();
       }
     });
@@ -174,16 +139,16 @@ UMZUGSPLANER.compute = (function () {
   function initEventshandler() {
     $('#rem_plann_form').submit(function(event) {
       event.preventDefault();
-      var removal_type = $('input:radio[name="removal_type"]:checked').val();
-      var datepicker_date = $( "#datepicker" ).datepicker("getDate" );
-      if(datepicker_date !== null) {
+      removal_type = $('input:radio[name="removal_type"]:checked').val();
+      removal_date = $( "#datepicker" ).datepicker("getDate" );
+      if(removal_date !== null) {
         $.ajax({
           type: "GET",
           url: "removalTips.xml",
           dataType: "xml",
           async: true,
           success: function (xml) {
-            setTabData(xml, removal_type, datepicker_date);
+            setTabData(xml, removal_type, removal_date);
             initTabs();
           },
           error: function (req, error, exception) {
@@ -195,7 +160,7 @@ UMZUGSPLANER.compute = (function () {
     });
     $('#pdf_link').click(function(event) {
       event.preventDefault();
-      createPDF();
+      createPDF3();
     });
     $('#print_link').click(function(event) {
       event.preventDefault();
