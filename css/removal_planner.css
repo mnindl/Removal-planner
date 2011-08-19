@@ -1,6 +1,73 @@
 #removal_planner {
   width: 762px;
+  color: #444444;
+  font: 10px/1.33333 Verdana,"DejaVu Sans",Arial,Helvetica,sans-serif;
 }
+#removal_planner #plan_result {
+  width: 762px;
+  overflow: hidden;
+}
+#removal_planner #tabs {
+  border: none;
+}
+#removal_planner #tabs .ui-tabs-nav {
+  border: none;
+  background: none;
+  margin-left: 14px;
+}
+#removal_planner #tabs li.ui-state-default {
+  width: 180px;
+  background: none;
+  background-color: #787f87;
+  border-left: none;
+  border-right: none;
+  border-color: #d5d6d8;
+  margin: 3px 2px 0 0;
+}
+#removal_planner #tabs li.ui-state-default:hover {
+  height: 28px;
+  margin-top: 0;
+}
+#removal_planner #tabs li.ui-tabs-selected {
+  background-color: #f9f9f9;
+  margin: 0 0 0 0;
+  height: 28px;
+  border-left: 1px solid #D5D6D8;
+}
+#removal_planner #tabs li.ui-tabs-selected.last_tab {
+  border-right: 1px solid #D5D6D8;
+}
+#removal_planner #tabs li.ui-state-default a {
+  color: #ffffff;
+  outline: none;
+  margin-left: 10px;
+  font-weight: bold;
+}
+#removal_planner #tabs li.ui-state-default a:hover {
+  color: #FF7500;
+  margin-top: 2px;
+}
+#removal_planner #tabs li.ui-tabs-selected a {
+  color: #FF7500;
+  margin-top: 2px;
+}
+#removal_planner #tabs .tab_content {
+  border: 1px solid #d5d6d8;
+  border-radius: 4px 4px;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px 4px;
+  -o-border-radius: 4px 4px;
+  -ms-border-radius: 4px 4px;
+  -khtml-border-radius: 4px 4px;
+  background: #ffffff;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #f9f9f9), color-stop(30%,  #ffffff));
+  background-image: -moz-linear-gradient(top, #f9f9f9 0%,  #ffffff 30%);
+  background-image: linear-gradient(top, #f9f9f9 0%,  #ffffff 30%);
+  -moz-box-shadow: 0 1px 4px #D5D6D8;
+  -webkit-box-shadow: 0 1px 4px #D5D6D8;
+  box-shadow: 0 1px 4px #D5D6D8;
+}
+
 #removal_planner .scroll-pane {
   width: 100%;
   height: 200px;
@@ -11,10 +78,10 @@
   left: -10000px;
   display: block;
 }
-#tabs {
+/*#removal_planner #tabs {
   width: 100%;
-}
-.jScrollPaneContainer {
+}*/
+#removal_planner .jScrollPaneContainer {
 position: relative;
 overflow: hidden;
 z-index: 1;
@@ -22,9 +89,50 @@ z-index: 1;
 #removal_planner .tips {
   overflow: hidden;
 }
-#removal_planner .time,
+#removal_planner .tip_holder {
+  border-bottom: 1px solid #ccd9e2;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+#removal_planner .time {
+  float: left;
+  width: 20%;
+}
 #removal_planner .tip {
   float: left;
+  width: 80%;
+  overflow: hidden;
+}
+#removal_planner .tip .link_list,
+#removal_planner .tip .tip_body {
+  float: left;
   width: 50%;
-  margin-bottom: 30px;
+}
+#removal_planner .tip ul {
+  padding-left: 15px;
+  list-style-type: circle;
+}
+#removal_planner .tip .link_list {
+  width: 43%;
+  margin-left: 10px;
+}
+#removal_planner .tip .link_list a {
+  background: url("../img/sp_expose.png") no-repeat scroll -564px -1676px transparent;
+  display: inline-block;
+  margin-left: -7px;
+  padding-left: 7px;
+  color: #0044CC;
+  text-decoration: none;
+  display: block;
+}
+#removal_planner .tip .link_list a:hover {
+  color: #E75C00;
+  text-decoration: underline;
+}
+#removal_planner .time .late_day {
+  color: #FF7500;
+}
+#removal_planner .time .day {
+  font-weight: bold;
 }

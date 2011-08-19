@@ -212,7 +212,7 @@ gemeinsame Items :
 
     Infos zum Thema Internet --> http://www.immobilienscout24.de/de/umzug/ummelden/telefon/ratgdl0212/index.jsp
     Was bringt ein Stromwechsel? --> http://www.immobilienscout24.de/de/umzug/ummelden/strom_gas/ratgdl120/index.jsp
-    Informationen zur Ummeldung von Vereinen und MitgliedschaftenHier neue Anbieter in Ihrer Region finden --> http://www.immobilienscout24.de/de/umzug/umzugsplaner/auszug/r113/r113_6/1136.jsp
+    Informationen zur Ummeldung von Vereinen und Mitgliedschaften --> http://www.immobilienscout24.de/de/umzug/umzugsplaner/auszug/r113/r113_6/1136.jsp
     Hier neue Anbieter in Ihrer Region finden --> http://www.immobilienscout24.de/Lead/Portal/Anmelden
     Adresse bequem online ummelden --> http://redirect.immobilienscout24.de/servlet/redirect?ref=%2Fde%2Fsnippets%2Fumzug%2Fmein-umzugsplaner%2Fsnippet.xml&location=https%3A%2F%2Feinfach-ummelden.de%2F
   

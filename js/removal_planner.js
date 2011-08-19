@@ -8,12 +8,30 @@ if (!window.UMZUGSPLANER) { var UMZUGSPLANER = {}; }
 UMZUGSPLANER.compute = (function () {
   var currentTab,
       removal_date,
-      removal_type;
+      removal_type,
+      day_milli_sec = 24*60*60*1000,
+      week_milli_sec = 7*24*60*60*1000,
+      dayNames = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
   function createPDF3() {
     console.log(removal_date.getTime());
     location.href="http://pdf.umzugskalender.de/MichasTest/test.php?currentTab="
                   +currentTab+"&removal_date="+Math.round((removal_date.getTime()) / 1000)+"&removal_type="+removal_type;
   }
+  function getXml() {
+    $.ajax({
+      type: "GET",
+      url: "removalTips.xml",
+      dataType: "xml",
+      async: true,
+      success: function (xml) {
+        setTabData(xml);
+        initTabs();
+      },
+      error: function (req, error, exception) {
+        alert(eror);
+      }
+    });
+  }  
   function initDatePicker() {
     $.datepicker.regional['de'] = {
     closeText: 'schließen',
@@ -24,7 +42,7 @@ UMZUGSPLANER.compute = (function () {
     'Juli','August','September','Oktober','November','Dezember'],
     monthNamesShort: ['Jan','Feb','Mär','Apr','Mai','Jun',
     'Jul','Aug','Sep','Okt','Nov','Dez'],
-    dayNames: ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'],
+    dayNames: dayNames,
     dayNamesShort: ['So','Mo','Di','Mi','Do','Fr','Sa'],
     dayNamesMin: ['So','Mo','Di','Mi','Do','Fr','Sa'],
     weekHeader: 'Wo',
@@ -36,6 +54,7 @@ UMZUGSPLANER.compute = (function () {
     $.datepicker.setDefaults($.datepicker.regional['de']);
     $('#datepicker').datepicker({ minDate: new Date() });
     $('#datepicker').datepicker("setDate", new Date($("#datepicker").val()) );
+    getXml();
   }
   function getTip(xml, order, removal_type) {
     var tip,
@@ -44,8 +63,9 @@ UMZUGSPLANER.compute = (function () {
     if ($tip.size() < 1) {
       $tip = $(xml).find('removalTipItem[type="common"][order="'+order+'"]');
     }
+    tip = "<div class=\"tip_body\">";
     headline = $tip.find('headline').text();
-    tip = "<h3 class=\"headline\">"+headline+"</h3>";
+    tip += "<h3 class=\"headline\">"+headline+"</h3>";
     if ($text = $tip.find('text'), $text.size() >= 1) {
       tip += "<p class=\"text\">"+$text.text()+"</p>";
     }
@@ -57,6 +77,7 @@ UMZUGSPLANER.compute = (function () {
       });
       tip += "</ul>";
     }
+    tip += "</div>";
     if ($links = $tip.find('link'), $links.size() >= 1) {
       tip += "<div class=\"link_list\">";
       $links.each(function(){
@@ -67,17 +88,23 @@ UMZUGSPLANER.compute = (function () {
       });
       tip += "</div>"
     }
-    
     return tip;
   }
-  function setTabData (xml, removal_type, removal_date) {
+  function dateOut(item_date) {
+    var temp;
+    if (item_date.getTime() < new Date().getTime() - day_milli_sec) {
+      temp = "<p class=\"late_day\">baldm&#246;glichst</p>";
+    } else {
+      temp = "<p class=\"day\">"+dayNames[item_date.getDay()]+"</p><p>"+item_date.toLocaleDateString()+"</p>";
+    }
+    return temp;
+  }
+  function setTabData (xml) {
     var common_items = $(xml).find('removalTipItem[type="common"]'),
         removal_type_items = $(xml).find('removalTipItem[type="'+removal_type+'"]'),
         removal_type_items_time = [],
         common_items_time = [],
         merged_items_time,
-        day_milli_sec = 24*60*60*1000,
-        week_milli_sec = 7*24*60*60*1000,
         n,
         i2 = -1,
         i3 = -1,
@@ -87,6 +114,8 @@ UMZUGSPLANER.compute = (function () {
         html_tab3 = [],
         html_tab4 = [];
     console.log(day_milli_sec*10000000);
+    removal_type = $('input:radio[name="removal_type"]:checked').val();
+    removal_date = $( "#datepicker" ).datepicker("getDate" );
     for (var i = -1, n = removal_type_items.length; ++i < n;) {
       removal_type_items_time[i] = Number($(removal_type_items[i]).attr('order'));
     }
@@ -101,12 +130,14 @@ UMZUGSPLANER.compute = (function () {
           item_date = new Date(removal_date.getTime() + order*day_milli_sec),
           removal_week_end = new Date(removal_date.getTime() + week_milli_sec),
           tip = getTip(xml, order, removal_type),
-          item_date_out = (item_date.getTime() < new Date().getTime() - day_milli_sec ? "baldm&#246;glichst" : item_date.toLocaleDateString());
+          item_date_out = dateOut(item_date);
     /*var end = new Date().getTime();
     var time = end - start;
     console.log('Execution time: ' + time);*/
-      html_tab1[i] = "<div class=\"time\">"+item_date_out+"  nr="+i+"</div>"
-                      +"<div class=\"tip\">"+tip+"</div>";
+      html_tab1[i] = "<div class=\"tip_holder\">"
+                     +"<div class=\"time\">"+item_date_out+"</div>"
+                     +"<div class=\"tip\">"+tip+"</div>"
+                     +"</div>";
       if (item_date < removal_date) {
         ++i2;
         html_tab2[i2] = html_tab1[i];
@@ -139,23 +170,7 @@ UMZUGSPLANER.compute = (function () {
   function initEventshandler() {
     $('#rem_plann_form').submit(function(event) {
       event.preventDefault();
-      removal_type = $('input:radio[name="removal_type"]:checked').val();
-      removal_date = $( "#datepicker" ).datepicker("getDate" );
-      if(removal_date !== null) {
-        $.ajax({
-          type: "GET",
-          url: "removalTips.xml",
-          dataType: "xml",
-          async: true,
-          success: function (xml) {
-            setTabData(xml, removal_type, removal_date);
-            initTabs();
-          },
-          error: function (req, error, exception) {
-            alert(eror);
-          }
-        });
-      }
+      getXml();
       return false;
     });
     $('#pdf_link').click(function(event) {
