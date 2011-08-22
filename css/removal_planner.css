@@ -18,41 +18,57 @@
 #removal_planner #tabs li.ui-state-default {
   width: 180px;
   background: none;
-  background-color: #787f87;
-  border-left: none;
-  border-right: none;
-  border-color: #d5d6d8;
-  margin: 3px 2px 0 0;
-}
-#removal_planner #tabs li.ui-state-default:hover {
   height: 28px;
-  margin-top: 0;
+  border: none;
+}
+#removal_planner #tabs li i {
+  background-color: #6e757d;
+  display: block;
+  width: 100%;
+  border: 1px solid #d2d4d6;
+  border-bottom: none;
+}
+#removal_planner #tabs li .over_tab {
+  opacity: 0.5;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+#removal_planner #tabs li .under_tab {
+  border-top: none;
+  border-bottom: none;
 }
 #removal_planner #tabs li.ui-tabs-selected {
   background-color: #f9f9f9;
-  margin: 0 0 0 0;
-  height: 28px;
-  border-left: 1px solid #D5D6D8;
+  -moz-box-shadow: 6px -2px 2px -3px #6B6F72;
+  -webkit-box-shadow: 6px -2px 2px -3px #6B6F72;
+  box-shadow: 6px -2px 2px -3px #6B6F72;
+  margin-right: 0;
+}
+#removal_planner #tabs li.ui-tabs-selected i {
+  background-color: #f9f9f9;
 }
 #removal_planner #tabs li.ui-tabs-selected.last_tab {
-  border-right: 1px solid #D5D6D8;
+  -moz-box-shadow: -6px -2px 2px -3px #6B6F72;
+  -webkit-box-shadow: -6px -2px 2px -3px #6B6F72;
+  box-shadow: -6px -2px 2px -3px #6B6F72;
+  margin-left: -2px;
 }
 #removal_planner #tabs li.ui-state-default a {
   color: #ffffff;
   outline: none;
-  margin-left: 10px;
   font-weight: bold;
+  position: relative;
+  top: -15px;
+  font-size: 12px;
 }
 #removal_planner #tabs li.ui-state-default a:hover {
   color: #FF7500;
-  margin-top: 2px;
 }
 #removal_planner #tabs li.ui-tabs-selected a {
   color: #FF7500;
-  margin-top: 2px;
 }
 #removal_planner #tabs .tab_content {
-  border: 1px solid #d5d6d8;
+  border: 1px solid #bababa ;
   border-radius: 4px 4px;
   -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px 4px;
@@ -67,10 +83,9 @@
   -webkit-box-shadow: 0 1px 4px #D5D6D8;
   box-shadow: 0 1px 4px #D5D6D8;
 }
-
 #removal_planner .scroll-pane {
   width: 100%;
-  height: 200px;
+  height: 350px;
   overflow: auto;
 }
 #removal_planner #tabs .ui-tabs-hide {
@@ -78,9 +93,6 @@
   left: -10000px;
   display: block;
 }
-/*#removal_planner #tabs {
-  width: 100%;
-}*/
 #removal_planner .jScrollPaneContainer {
 position: relative;
 overflow: hidden;
