@@ -2,6 +2,174 @@
   width: 762px;
   color: #444444;
   font: 10px/1.33333 Verdana,"DejaVu Sans",Arial,Helvetica,sans-serif;
+  font-size: 10px !important;
+}
+#removal_planner a {
+  outline: none;
+}
+#removal_planner #form_holder {
+  border-bottom: 1px solid #edeeee;
+  border-left: 1px solid #edeeee;
+  border-radius: 4px 4px;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px 4px;
+  -o-border-radius: 4px 4px;
+  -ms-border-radius: 4px 4px;
+  -khtml-border-radius: 4px 4px;
+  padding: 4px;
+  -moz-box-shadow: 2px 3px 6px -2px #E3E3E3;
+  -webkit-box-shadow: 2px 3px 6px -2px #E3E3E3;
+  box-shadow: 2px 3px 6px -2px #E3E3E3;
+  margin-bottom: 10px;
+}
+#removal_planner #rem_plann_form {
+  background: url(../img/header.jpg) no-repeat 0 0 transparent;
+  height: 265px;
+}
+#removal_planner #rem_plann_form #form_box {
+  width: 450px;
+  height: 95px;
+  position: relative;
+  top: 111px;
+  left: 280px;
+  background-color: #ffffff;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #edeeee), color-stop(100%,  #ffffff));
+  background-image: -moz-linear-gradient(top, #edeeee 0%,  #ffffff 100%);
+  background-image: linear-gradient(top, #edeeee 0%,  #ffffff 100%);
+  border-radius: 4px 4px;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px 4px;
+  -o-border-radius: 4px 4px;
+  -ms-border-radius: 4px 4px;
+  -khtml-border-radius: 4px 4px;
+  overflow: hidden;
+}
+#removal_planner #rem_plann_form #form_box span,
+#removal_planner #rem_plann_form #form_box .radio {
+  display: block;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#removal_planner #rem_plann_form #form_box .radio {
+  width: 20px;
+  margin-left: 20px;
+}
+#removal_planner #rem_plann_form #form_box .radio:hover {
+  background: 1px solid red;
+}
+#removal_planner #rem_plann_form #form_box span,
+#removal_planner #rem_plann_form #form_box #form_label {
+  font-size: 1.1em;
+}
+#removal_planner #rem_plann_form #form_box span.with_own {
+  width: 130px;
+}
+#removal_planner #rem_plann_form #form_box span.with_sped {
+  width: 225px;
+}
+#removal_planner #rem_plann_form #form_box #form_label {
+  clear: both;
+  float: left;
+  margin-left: 20px;
+  width: 113px;
+  background: url(../img/calendar.png) no-repeat scroll 100px 0 transparent;
+  padding: 2px 20px 0 0;
+  height: 24px;
+  cursor: pointer;
+}
+#removal_planner #rem_plann_form #form_box #datepicker {
+  border: 1px solid #7F9DB9;
+  display: block;
+  float: left;
+  font-size: 11px;
+  height: 15px;
+  padding: 3px 0 1px 2px;
+  width: 112px;
+  cursor: pointer;
+}
+#removal_planner #rem_plann_form #form_box .submit {
+  float: left;
+  margin-left: 15px;
+}
+#removal_planner #rem_plann_form #form_box .submit a {
+  background: url(../img/sp_expose.png) no-repeat scroll 100% -789px transparent;
+  cursor: pointer;
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  text-decoration: none !important;
+}
+#removal_planner #rem_plann_form #form_box .submit span {
+  font-size: 1.1em;
+  background: url(../img/sp_expose.png) no-repeat scroll 0 -727px transparent;
+  padding: 0 6px 2px;
+  text-shadow: -1px -1px 0 #FF7500, 1px -1px 0 #FF7500, 0 -1px 0 #FF7500, 0 1px 1px #FF7500;
+  display: inline-block;
+  line-height: 19px !important;
+  margin: 0 0 0-2px;
+  color: #ffffff;
+  font-weight: bold;
+}
+#removal_planner #rem_plann_form #form_box .submit a:hover {
+  background-position: 100% -820px;
+  color: #FFFFFF;
+}
+#removal_planner #rem_plann_form #form_box .submit a span:hover { 
+  background-position: 0 -758px;
+  text-shadow: none;
+}
+#removal_planner #ui-datepicker-div {
+  border: none;
+  background-color: #ffffff;
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #edeeee), color-stop(100%,  #ffffff));
+  background-image: -moz-linear-gradient(top, #edeeee 0%,  #ffffff 100%);
+  background-image: linear-gradient(top, #edeeee 0%,  #ffffff 100%);
+  -moz-box-shadow: 2px 3px 6px -2px #E3E3E3;
+  -webkit-box-shadow: 2px 3px 6px -2px #E3E3E3;
+  box-shadow: 2px 3px 6px -2px #E3E3E3;
+  width: 25em;
+}
+#removal_planner #ui-datepicker-div .ui-datepicker-header {
+  background-color: #FF7500;
+}
+#removal_planner #ui-datepicker-div .ui-datepicker-header .ui-corner-all {
+  background-color: #ffffff;
+}
+#removal_planner #ui-datepicker-div .ui-datepicker-header .ui-datepicker-title span {
+  color: #ffffff
+}
+#removal_planner #ui-datepicker-div .ui-datepicker-header .ui-corner-all .ui-icon {
+  background-image: url(../img/ui-icons_222222_256x240.png);
+}
+#removal_planner #ui-datepicker-div .ui-datepicker-today a {
+  border-color: #FF7500;
+}
+#removal_planner #ui-datepicker-div .ui-datepicker-current-day a {
+  border-color: #FF7500;
+  background-color: #FF7500;
+  color: #ffffff;
+  font-weight: bold;
+}
+#removal_planner #ui-datepicker-div .ui-datepicker-calendar a {
+  text-align: center;
+}
+#removal_planner #rem_plann_form #pdf_export {
+  font-size: 14px;
+  position: relative;
+  top: 128px;
+  left: 615px;
+  width: 130px;
+}
+#removal_planner #rem_plann_form #pdf_export p {
+  background: url(../img/pdf.png) no-repeat scroll 85px 0 transparent;
+  width: 120px;
+  height: 30px;
+  padding-top: 5px;
+  cursor: pointer;
+}
+#removal_planner #rem_plann_form #pdf_export p:hover {
+  color: #FF7500;
 }
 #removal_planner #plan_result {
   width: 762px;
@@ -9,6 +177,7 @@
 }
 #removal_planner #tabs {
   border: none;
+  font-size: 10px;
 }
 #removal_planner #tabs .ui-tabs-nav {
   border: none;
@@ -59,7 +228,7 @@
   font-weight: bold;
   position: relative;
   top: -15px;
-  font-size: 12px;
+  font-size: 1.2em;
 }
 #removal_planner #tabs li.ui-state-default a:hover {
   color: #FF7500;
@@ -82,11 +251,48 @@
   -moz-box-shadow: 0 1px 4px #D5D6D8;
   -webkit-box-shadow: 0 1px 4px #D5D6D8;
   box-shadow: 0 1px 4px #D5D6D8;
+  font-size: 11px;
+  padding: 1em 5px 1em 1.4em;
+}
+#removal_planner #tabs .jspHorizontalBar, #removal_planner #tabs .jspVerticalBar, #removal_planner #tabs .jspTrack {
+    background: none;
+    border: 0;
+    width: 10px;
+    right: 3px;
+}
+#removal_planner #tabs .jspTrack {
+    background: #e3e3e3;
+    border: 1px solid #d6d6d6;
+    width: 14px;
+    padding: 0;
+  -webkit-border-radius: 6px 6px;
+  -moz-border-radius: 6px 6px;
+  -o-border-radius: 6px 6px;
+  -ms-border-radius: 6px 6px;
+  -khtml-border-radius: 6px 6px;
+}
+#removal_planner #tabs .jspDrag {
+  background: #abaeb3;
+  -webkit-border-radius: 4px 4px;
+  -moz-border-radius: 4px 4px;
+  -o-border-radius: 4px 4px;
+  -ms-border-radius: 4px 4px;
+  -khtml-border-radius: 4px 4px;
+  width: 14px;
+}
+#removal_planner #tabs .jspHorizontalBar .jspCap {
+    width: 2px;
+}
+#removal_planner #tabs .jspVerticalBar .jspCap {
+    height: 2px;
+    display: block;
+}
+#removal_planner #tabs .jspVerticalBar .jspCapBottom {
+    height: 3px;
 }
 #removal_planner .scroll-pane {
   width: 100%;
   height: 350px;
-  overflow: auto;
 }
 #removal_planner #tabs .ui-tabs-hide {
   position: absolute;
@@ -130,13 +336,16 @@ z-index: 1;
   margin-left: 10px;
 }
 #removal_planner .tip .link_list a {
-  background: url("../img/sp_expose.png") no-repeat scroll -564px -1676px transparent;
+  background: url(../img/sp_expose.png) no-repeat scroll -564px -1676px transparent;
   display: inline-block;
   margin-left: -7px;
-  padding-left: 7px;
+  padding-left: 9px;
   color: #0044CC;
   text-decoration: none;
   display: block;
+}
+#removal_planner .tip .link_list a.extern {
+  background-position: -461px -2908px;
 }
 #removal_planner .tip .link_list a:hover {
   color: #E75C00;

@@ -12,8 +12,7 @@ UMZUGSPLANER.compute = (function () {
       day_milli_sec = 24*60*60*1000,
       week_milli_sec = 7*24*60*60*1000,
       dayNames = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
-  function createPDF3() {
-    console.log(removal_date.getTime());
+  function createPDF() {
     location.href="http://pdf.umzugskalender.de/MichasTest/test.php?currentTab="
                   +currentTab+"&removal_date="+Math.round((removal_date.getTime()) / 1000)+"&removal_type="+removal_type;
   }
@@ -34,10 +33,6 @@ UMZUGSPLANER.compute = (function () {
   }  
   function initDatePicker() {
     $.datepicker.regional['de'] = {
-    closeText: 'schließen',
-    prevText: '&#x3c;zurück',
-    nextText: 'Vor&#x3e;',
-    currentText: 'heute',
     monthNames: ['Januar','Februar','März','April','Mai','Juni',
     'Juli','August','September','Oktober','November','Dezember'],
     monthNamesShort: ['Jan','Feb','Mär','Apr','Mai','Jun',
@@ -48,11 +43,13 @@ UMZUGSPLANER.compute = (function () {
     weekHeader: 'Wo',
     dateFormat: 'dd.mm.yy',
     firstDay: 1,
-    isRTL: false,
-    showMonthAfterYear: false,
-    yearSuffix: ''};
+    showMonthAfterYear: true,
+    showAnim: 'fold',
+    beforeShow: function(input, inst) {
+        inst.dpDiv.css({marginTop: (-input.offsetHeight-2) + 'px'});
+    }};
     $.datepicker.setDefaults($.datepicker.regional['de']);
-    $('#datepicker').datepicker({ minDate: new Date() });
+    $('#datepicker').datepicker();
     $('#datepicker').datepicker("setDate", new Date($("#datepicker").val()) );
     getXml();
   }
@@ -69,7 +66,7 @@ UMZUGSPLANER.compute = (function () {
     if ($text = $tip.find('text'), $text.size() >= 1) {
       tip += "<p class=\"text\">"+$text.text()+"</p>";
     }
-    if ($list = $tip.find('list'), $list.size() >=1) {
+    if ($list = $tip.find('list'), $list.size() >= 1) {
       tip += "<ul class=\"list\">";
       $list_items = $list.find('listItem');
       $list_items.each(function(){
@@ -82,7 +79,7 @@ UMZUGSPLANER.compute = (function () {
       tip += "<div class=\"link_list\">";
       $links.each(function(){
         var $this = $(this);
-        tip += "<a class=\""+$this.attr('type')+"\"href=\""+$this.attr('href')+"\">"
+        tip += "<a class=\""+$this.attr('type')+"\"href=\""+$this.attr('href')+"\" target=\"_blank\">"
                 +$this.text()
                 +"</a>";
       });
@@ -113,7 +110,6 @@ UMZUGSPLANER.compute = (function () {
         html_tab2 = [],
         html_tab3 = [],
         html_tab4 = [];
-    console.log(day_milli_sec*10000000);
     removal_type = $('input:radio[name="removal_type"]:checked').val();
     removal_date = $( "#datepicker" ).datepicker("getDate" );
     for (var i = -1, n = removal_type_items.length; ++i < n;) {
@@ -150,7 +146,6 @@ UMZUGSPLANER.compute = (function () {
         ++i4;
         html_tab4[i4] = html_tab1[i];
       }
-
     }
     $('.scroll-pane .tips').html("");
     $('#tab1 .scroll-pane .tips').append(html_tab1.join(""));
@@ -168,19 +163,17 @@ UMZUGSPLANER.compute = (function () {
     });
   }  
   function initEventshandler() {
-    $('#rem_plann_form').submit(function(event) {
+    $("#rem_plann_form .submit").click(function (event) {
       event.preventDefault();
       getXml();
       return false;
     });
-    $('#pdf_link').click(function(event) {
-      event.preventDefault();
-      createPDF3();
+    $('#form_label').click(function(){
+      $('#datepicker').datepicker("show");
     });
-    $('#print_link').click(function(event) {
-      event.preventDefault();
-      self.print();
-    });    
+    $('#pdf_export').click(function() {
+      createPDF();
+    });
   }
   function init() {
     initDatePicker();

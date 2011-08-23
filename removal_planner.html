@@ -12,21 +12,24 @@
 <title>Umzugsplaner</title>
 </head>
 <body id="removal_planner">
-  <h1>Mein Umzugsplaner</h1>
-  <p>
-    Um Ihnen die Vorbereitungen zu erleichtern, bieten wir Ihnen hier einen auf Ihre Bed&#252;rfnisse ausgerichteten Umzugsplaner an.
-  </p>
-  <form id="rem_plann_form">
-    <p class="form_label">Umzugstermin:<input id="datepicker" type="text"></p>
-    <input type="radio" value="own" name="removal_type" checked="checked"><span>Umzug in Eigenregie</span>
-    <input type="radio" value="sped" name="removal_type"><span>Umzug mit einem Umzugsunternehmen</span>
-    <input type="submit">
-  </form>
+  <div id="form_holder">
+    <form id="rem_plann_form">
+      <div id="form_box">
+        <input class="radio" type="radio" value="own" name="removal_type" checked="checked"><span class="with_own">Umzug in Eigenregie</span>
+        <input class="radio" type="radio" value="sped" name="removal_type"><span class="with_sped">Umzug mit einem Umzugsunternehmen</span>
+        <p id="form_label">Umzugstermin:</p><input id="datepicker" type="text"/>
+        <div class="submit">
+          <a id="submit">
+            <span>Umzugsplan erstellen</span>
+          </a>
+        </div>
+      </div>
+      <div id="pdf_export">
+        <p>PDF Export</p>
+      </div>
+    </form>
+  </div>
   <div id="plan_result" style="display: none;">
-      <div id="links">
-      <a href="#" id="print_link">Drucken</a>
-      <a href="#" id="pdf_link">PDF</a>
-    </div>
     <div id="tabs">
       <ul>
         <li><i class="over_tab">&nbsp;</i><a href="#tab1">Zeitliche Reihenfolge</a><i class="under_tab">&nbsp;</i></li>
@@ -49,10 +52,6 @@
     </div>
   </div>  
   <script src="http://www.google.com/jsapi"></script>
-  <script src="js/libs/jspdf.js"></script>
-  <script src="js/libs/base64.js"></script>
-  <script src="js/libs/sprintf.js"></script>
-  <script src="js/libs/pdf.js"></script>
   <script src="js/removal_planner.js"></script>
   <script src="js/libs/jquery.mousewheel.js"></script>
   <script src="js/libs/jquery.jscrollpane.min.js"></script>
