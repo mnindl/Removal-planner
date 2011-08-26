@@ -13,11 +13,11 @@ UMZUGSPLANER.compute = (function () {
       week_milli_sec = 7*24*60*60*1000,
       dayNames = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
   function createPDF() {
-    location.href="http://pdf.umzugskalender.de/MichasTest/test.php?currentTab="
-                  +currentTab+"&removal_date="+Math.round((removal_date.getTime()) / 1000)+"&removal_type="+removal_type;
+    var url = "http://pdf.umzugskalender.de/MichasTest/test.php?currentTab="+currentTab+"&removal_date="+(Math.round((removal_date.getTime()) / 1000))+"&removal_type="+removal_type;
+    window.open(url);
   }
   function getXml() {
-    $.ajax({
+$.ajax({
       type: "GET",
       url: "removalTips.xml",
       dataType: "xml",
@@ -171,7 +171,7 @@ UMZUGSPLANER.compute = (function () {
     $('#form_label').click(function(){
       $('#datepicker').datepicker("show");
     });
-    $('#pdf_export').click(function() {
+    $('.pdf_export').click(function() {
       createPDF();
     });
   }

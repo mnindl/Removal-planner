@@ -132,6 +132,7 @@
 }
 #removal_planner #ui-datepicker-div .ui-datepicker-header {
   background-color: #FF7500;
+  background-image: none;
 }
 #removal_planner #ui-datepicker-div .ui-datepicker-header .ui-corner-all {
   background-color: #ffffff;
@@ -153,22 +154,28 @@
 }
 #removal_planner #ui-datepicker-div .ui-datepicker-calendar a {
   text-align: center;
+  background-image: none;
 }
-#removal_planner #rem_plann_form #pdf_export {
+#removal_planner .pdf_export {
   font-size: 14px;
   position: relative;
   top: 128px;
   left: 615px;
   width: 130px;
 }
-#removal_planner #rem_plann_form #pdf_export p {
+#removal_planner #pdf_holder {
+  position: relative;
+  left: 620px;
+  top: -46px;
+}
+#removal_planner .pdf_export p {
   background: url(../img/pdf.png) no-repeat scroll 85px 0 transparent;
   width: 120px;
   height: 30px;
   padding-top: 5px;
   cursor: pointer;
 }
-#removal_planner #rem_plann_form #pdf_export p:hover {
+#removal_planner .pdf_export p:hover {
   color: #FF7500;
 }
 #removal_planner #plan_result {
@@ -293,6 +300,7 @@
 #removal_planner .scroll-pane {
   width: 100%;
   height: 350px;
+  margin-bottom: 50px;
 }
 #removal_planner #tabs .ui-tabs-hide {
   position: absolute;
