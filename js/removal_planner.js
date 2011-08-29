@@ -17,7 +17,7 @@ UMZUGSPLANER.compute = (function () {
     window.open(url);
   }
   function getXml() {
-$.ajax({
+    $.ajax({
       type: "GET",
       url: "removalTips.xml",
       dataType: "xml",
@@ -98,7 +98,9 @@ $.ajax({
   }
   function setTabData (xml) {
     var common_items = $(xml).find('removalTipItem[type="common"]'),
+        removal_type = $('input:radio[name="removal_type"]:checked').val(),
         removal_type_items = $(xml).find('removalTipItem[type="'+removal_type+'"]'),
+        removal_date = $( "#datepicker" ).datepicker("getDate" ),
         removal_type_items_time = [],
         common_items_time = [],
         merged_items_time,
@@ -110,8 +112,6 @@ $.ajax({
         html_tab2 = [],
         html_tab3 = [],
         html_tab4 = [];
-    removal_type = $('input:radio[name="removal_type"]:checked').val();
-    removal_date = $( "#datepicker" ).datepicker("getDate" );
     for (var i = -1, n = removal_type_items.length; ++i < n;) {
       removal_type_items_time[i] = Number($(removal_type_items[i]).attr('order'));
     }
@@ -153,6 +153,10 @@ $.ajax({
     $('#tab3 .scroll-pane .tips').append(html_tab3.join(""));
     $('#tab4 .scroll-pane .tips').append(html_tab4.join(""));
     $('#plan_result').show();
+    if ($('li.ui-tabs-selected a').attr('href') != undefined) {
+      var tab_id = $('li.ui-tabs-selected a').attr('href');
+      $(tab_id+" .scroll-pane").jScrollPane();
+    }
   }
   function initTabs() {
     $('#tabs').tabs( {
