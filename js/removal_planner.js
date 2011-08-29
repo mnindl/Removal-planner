@@ -50,7 +50,6 @@ UMZUGSPLANER.compute = (function () {
     }};
     $.datepicker.setDefaults($.datepicker.regional['de']);
     $('#datepicker').datepicker();
-    //console.log($("#datepicker").val());
     $('#datepicker').datepicker("setDate", new Date() );
     getXml();
   }
@@ -186,7 +185,6 @@ UMZUGSPLANER.compute = (function () {
   function init() {
     initDatePicker();
     initEventshandler();
-    
   }
   return {
     init: function () {

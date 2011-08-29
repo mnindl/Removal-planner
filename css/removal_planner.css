@@ -141,6 +141,7 @@
   -webkit-box-shadow: 2px 3px 6px -2px #E3E3E3;
   box-shadow: 2px 3px 6px -2px #E3E3E3;
   width: 28em;
+  z-index: 900 !important;
 }
 #removal_planner #ui-datepicker-div .ui-datepicker-header {
   background-color: #FF7500;
@@ -179,6 +180,9 @@
   position: relative;
   left: 610px;
   top: -46px;
+}
+*+html #removal_planner #pdf_holder {
+  display: none;
 }
 #removal_planner .pdf_export p {
   background: url(../img/pdf.png) no-repeat scroll 90px 0 transparent;
