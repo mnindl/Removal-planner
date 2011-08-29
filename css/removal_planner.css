@@ -5,6 +5,7 @@
 /* nur zum entwickeln drin */
 #removal_planner {
   width: 762px;
+  overflow-x: hidden;
   color: #444444;
   font: 10px/1.33333 Verdana,"DejaVu Sans",Arial,Helvetica,sans-serif;
   font-size: 10px !important;
@@ -41,7 +42,7 @@
   position: relative;
   top: 111px;
   left: 280px;
-  background-color: #ffffff;
+  background-color: #edeeee;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #edeeee), color-stop(100%,  #ffffff));
   background-image: -moz-linear-gradient(top, #edeeee 0%,  #ffffff 100%);
   background-image: linear-gradient(top, #edeeee 0%,  #ffffff 100%);
@@ -56,12 +57,11 @@
   -webkit-box-shadow: 0px 3px 4px 0px #6e757d;
   box-shadow: 0px 3px 4px 0px #6e757d;
 }
-#removal_planner #rem_plann_form #form_box span,
 #removal_planner #rem_plann_form #form_box .radio {
-  display: block;
-  float: left;
   margin-top: 20px;
   margin-bottom: 20px;
+  position: relative;
+  top: -1px;
 }
 #removal_planner #rem_plann_form #form_box .radio {
   width: 20px;
@@ -140,7 +140,7 @@
   -moz-box-shadow: 2px 3px 6px -2px #E3E3E3;
   -webkit-box-shadow: 2px 3px 6px -2px #E3E3E3;
   box-shadow: 2px 3px 6px -2px #E3E3E3;
-  width: 25em;
+  width: 28em;
 }
 #removal_planner #ui-datepicker-div .ui-datepicker-header {
   background-color: #FF7500;
@@ -172,20 +172,21 @@
   font-size: 14px;
   position: relative;
   top: 128px;
-  left: 615px;
+  left: 607px;
   width: 130px;
 }
 #removal_planner #pdf_holder {
   position: relative;
-  left: 620px;
+  left: 610px;
   top: -46px;
 }
 #removal_planner .pdf_export p {
-  background: url(../img/pdf.png) no-repeat scroll 85px 0 transparent;
+  background: url(../img/pdf.png) no-repeat scroll 90px 0 transparent;
   width: 120px;
   height: 30px;
-  padding-top: 5px;
+  padding-top: 10px;
   cursor: pointer;
+  font-weight: bold;
 }
 #removal_planner .pdf_export p:hover {
   color: #FF7500;
@@ -203,11 +204,18 @@
   background: none;
   margin-left: 14px;
 }
+*+html #removal_planner #tabs .ui-tabs-nav {
+  position: relative;
+  top: -10px
+}
 #removal_planner #tabs li.ui-state-default {
   width: 180px;
   background: none;
   height: 28px;
   border: none;
+}
+*+html #removal_planner #tabs li.ui-state-default {
+  background-color: #ffffff;
 }
 #removal_planner #tabs li i {
   background-color: #6e757d;
@@ -232,22 +240,31 @@
   box-shadow: 6px -2px 2px -3px #6B6F72;
   margin-right: 0;
 }
+*+html #removal_planner #tabs li.ui-tabs-selected {
+  /*height: 30px;
+  overflow: hidden;*/
+}
 #removal_planner #tabs li.ui-tabs-selected i {
   background-color: #f9f9f9;
 }
-#removal_planner #tabs li.ui-tabs-selected.last_tab {
+#removal_planner #tabs ul li.ui-tabs-selected.last_tab {
   -moz-box-shadow: -6px -2px 2px -3px #6B6F72;
   -webkit-box-shadow: -6px -2px 2px -3px #6B6F72;
   box-shadow: -6px -2px 2px -3px #6B6F72;
   margin-left: -2px;
 }
-#removal_planner #tabs li.ui-state-default a {
+#removal_planner #tabs ul li a {
   color: #ffffff;
   outline: none;
   font-weight: bold;
   position: relative;
-  top: -15px;
+  top: -1px;
+  z-index: 2;
   font-size: 1.2em;
+  height: 0px;
+}
+*+html #removal_planner #tabs ul li a {
+  top: 10px;
 }
 #removal_planner #tabs li.ui-state-default a:hover {
   color: #FF7500;
@@ -353,7 +370,7 @@ z-index: 1;
 }
 #removal_planner .tip .link_list {
   width: 43%;
-  margin-left: 10px;
+  margin-left: 30px;
 }
 #removal_planner .tip .link_list a {
   background: url(../img/sp_expose.png) no-repeat scroll -564px -1676px transparent;

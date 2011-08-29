@@ -50,7 +50,8 @@ UMZUGSPLANER.compute = (function () {
     }};
     $.datepicker.setDefaults($.datepicker.regional['de']);
     $('#datepicker').datepicker();
-    $('#datepicker').datepicker("setDate", new Date($("#datepicker").val()) );
+    //console.log($("#datepicker").val());
+    $('#datepicker').datepicker("setDate", new Date() );
     getXml();
   }
   function getTip(xml, order, removal_type) {
@@ -92,7 +93,10 @@ UMZUGSPLANER.compute = (function () {
     if (item_date.getTime() < new Date().getTime() - day_milli_sec) {
       temp = "<p class=\"late_day\">baldm&#246;glichst</p>";
     } else {
-      temp = "<p class=\"day\">"+dayNames[item_date.getDay()]+"</p><p>"+item_date.toLocaleDateString()+"</p>";
+      var day =  item_date.getDate();
+          month = Number(item_date.getMonth()) +1,
+          item_date_format = (day > 9 ? day : "0"+day)+"."+(month > 9 ? month : "0"+month)+"."+item_date.getFullYear();
+      temp = "<p class=\"day\">"+dayNames[item_date.getDay()]+"</p><p>"+item_date_format+"</p>";
     }
     return temp;
   }
