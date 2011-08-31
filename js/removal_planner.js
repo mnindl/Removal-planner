@@ -13,7 +13,8 @@ UMZUGSPLANER.compute = (function () {
       week_milli_sec = 7*24*60*60*1000,
       dayNames = ['Sonntag','Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag'];
   function createPDF() {
-    var url = "http://pdf.umzugskalender.de/MichasTest/test.php?currentTab="+currentTab+"&removal_date="+(Math.round((removal_date.getTime()) / 1000))+"&removal_type="+removal_type;
+    var time = (Math.round((removal_date.getTime()) / 1000)),
+        url = "http://pdf.umzugskalender.de/umzugsplanerPDF/generate_pdf_small_font.php?currentTab="+currentTab+"&removal_date="+time+"&removal_type="+removal_type;
     window.open(url);
   }
   function getXml() {
@@ -100,10 +101,10 @@ UMZUGSPLANER.compute = (function () {
     return temp;
   }
   function setTabData (xml) {
+    removal_type = $('input:radio[name="removal_type"]:checked').val();
+    removal_date = $( "#datepicker" ).datepicker("getDate" );
     var common_items = $(xml).find('removalTipItem[type="common"]'),
-        removal_type = $('input:radio[name="removal_type"]:checked').val(),
         removal_type_items = $(xml).find('removalTipItem[type="'+removal_type+'"]'),
-        removal_date = $( "#datepicker" ).datepicker("getDate" ),
         removal_type_items_time = [],
         common_items_time = [],
         merged_items_time,

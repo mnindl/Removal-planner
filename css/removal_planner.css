@@ -31,6 +31,15 @@
   height: 262px;
   width: 752px;
 }
+#removal_planner #form_text {
+  position: absolute;
+  top: 25px;
+  left: 290px;
+  font-size: 13px;
+  color: #4a688f;
+  width: 445px;
+  z-index: 2;
+}
 #removal_planner #rem_plann_form {
   background: url(../img/header.jpg) no-repeat 0 0 transparent;
   height: 262px;
@@ -230,6 +239,8 @@
 }
 #removal_planner #tabs li .over_tab {
   opacity: 0.5;
+  /*bringt momentan nicht gewünschten Effekt*/
+ /* filter: alpha(opacity=5);*/
   border-top-right-radius: 4px;
   border-top-left-radius: 4px;
 }
@@ -356,7 +367,7 @@ z-index: 1;
 }
 #removal_planner .time {
   float: left;
-  width: 20%;
+  width: 120px;
 }
 #removal_planner .tip {
   float: left;
@@ -367,6 +378,7 @@ z-index: 1;
 #removal_planner .tip .tip_body {
   float: left;
   width: 50%;
+  min-width: 50%;
 }
 #removal_planner .tip ul {
   padding-left: 15px;
@@ -374,6 +386,7 @@ z-index: 1;
 }
 #removal_planner .tip .link_list {
   width: 43%;
+  min-width: 43%;
   margin-left: 30px;
 }
 #removal_planner .tip .link_list a {

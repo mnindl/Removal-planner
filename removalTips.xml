@@ -36,9 +36,7 @@
 </removalTipItem>
 <removalTipItem type="sped" order="-9">
   <headline>Kartons packen</headline>
-  <text>
-    Wenn die Umzugsfirma diesen Service nicht übernimmt, können die ersten Kartons gepackt werden (persönlicher Bedarf, Medikamente, Kulturbeutel, Wäsche und Ähnliches getrennt verpacken).
-  </text>
+  <text>Wenn die Umzugsfirma diesen Service nicht übernimmt, können die ersten Kartons gepackt werden (persönlicher Bedarf, Medikamente, Kulturbeutel, Wäsche und Ähnliches getrennt verpacken).</text>
 </removalTipItem>
 <removalTipItem type="sped" order="-7">
   <headline>Erinnerung Umzugshelfer</headline>
@@ -163,7 +161,7 @@
     Tipps zum Erstellen eines Möbelstellplans
   </link>
   <link type="intern" href="http://www.immobilienscout24.de/de/umzug/mietertipps/muster/wohnungsuebergabeprotokoll/index.jsp">
-   Musterprotokoll Wohnungsübergabe
+    Musterprotokoll Wohnungsübergabe
   </link>
 </removalTipItem>
 <removalTipItem type="own" order="0">
