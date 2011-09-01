@@ -18,11 +18,7 @@
   border-left: 1px solid #E3E3E3;
   border-bottom: 1px solid #E3E3E3;
   border-radius: 4px 4px;
-  -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px 4px;
-  -o-border-radius: 4px 4px;
-  -ms-border-radius: 4px 4px;
-  -khtml-border-radius: 4px 4px;
   padding: 0 3px 3px 3px;
   -moz-box-shadow: 2px 3px 6px -2px #E3E3E3;
   -webkit-box-shadow: 2px 3px 6px -2px #E3E3E3;
@@ -55,12 +51,9 @@
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #edeeee), color-stop(100%,  #ffffff));
   background-image: -moz-linear-gradient(top, #edeeee 0%,  #ffffff 100%);
   background-image: linear-gradient(top, #edeeee 0%,  #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edeeee', endColorstr='#ffffff');
   border-radius: 4px 4px;
-  -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px 4px;
-  -o-border-radius: 4px 4px;
-  -ms-border-radius: 4px 4px;
-  -khtml-border-radius: 4px 4px;
   overflow: hidden;
   -moz-box-shadow: 0px 3px 4px 0px #6e757d;
   -webkit-box-shadow: 0px 3px 4px 0px #6e757d;
@@ -146,6 +139,7 @@
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #edeeee), color-stop(100%,  #ffffff));
   background-image: -moz-linear-gradient(top, #edeeee 0%,  #ffffff 100%);
   background-image: linear-gradient(top, #edeeee 0%,  #ffffff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edeeee', endColorstr='#ffffff');
   -moz-box-shadow: 2px 3px 6px -2px #E3E3E3;
   -webkit-box-shadow: 2px 3px 6px -2px #E3E3E3;
   box-shadow: 2px 3px 6px -2px #E3E3E3;
@@ -186,9 +180,9 @@
   width: 130px;
 }
 #removal_planner #pdf_holder {
-  position: relative;
   left: 610px;
-  top: -46px;
+  position: absolute;
+  top: 414px;
 }
 *+html #removal_planner #pdf_holder {
   display: none;
@@ -242,7 +236,9 @@
   /*bringt momentan nicht gewünschten Effekt*/
  /* filter: alpha(opacity=5);*/
   border-top-right-radius: 4px;
+  -moz-border-radius-topright: 4px;
   border-top-left-radius: 4px;
+  -moz-border-radius-topleft: 4px;
 }
 #removal_planner #tabs li .under_tab {
   border-top: none;
@@ -254,10 +250,6 @@
   -webkit-box-shadow: 6px -2px 2px -3px #6B6F72;
   box-shadow: 6px -2px 2px -3px #6B6F72;
   margin-right: 0;
-}
-*+html #removal_planner #tabs li.ui-tabs-selected {
-  /*height: 30px;
-  overflow: hidden;*/
 }
 #removal_planner #tabs li.ui-tabs-selected i {
   background-color: #f9f9f9;
@@ -273,7 +265,7 @@
   outline: none;
   font-weight: bold;
   position: relative;
-  top: -1px;
+  top: 1px;
   z-index: 2;
   font-size: 1.2em;
   height: 0px;
@@ -287,18 +279,16 @@
 #removal_planner #tabs li.ui-tabs-selected a {
   color: #FF7500;
 }
-#removal_planner #tabs .tab_content {
+#removal_planner #tabs .tab_content,
+#removal_planner .loading_animation {
   border: 1px solid #bababa ;
   border-radius: 4px 4px;
-  -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px 4px;
-  -o-border-radius: 4px 4px;
-  -ms-border-radius: 4px 4px;
-  -khtml-border-radius: 4px 4px;
   background: #ffffff;
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%, #f9f9f9), color-stop(30%,  #ffffff));
   background-image: -moz-linear-gradient(top, #f9f9f9 0%,  #ffffff 30%);
   background-image: linear-gradient(top, #f9f9f9 0%,  #ffffff 30%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#ffffff');
   -moz-box-shadow: 0 1px 4px #D5D6D8;
   -webkit-box-shadow: 0 1px 4px #D5D6D8;
   box-shadow: 0 1px 4px #D5D6D8;
@@ -316,19 +306,13 @@
     border: 1px solid #d6d6d6;
     width: 14px;
     padding: 0;
-  -webkit-border-radius: 6px 6px;
   -moz-border-radius: 6px 6px;
-  -o-border-radius: 6px 6px;
-  -ms-border-radius: 6px 6px;
-  -khtml-border-radius: 6px 6px;
+  border-radius: 6px 6px;
 }
 #removal_planner #tabs .jspDrag {
   background: #abaeb3;
-  -webkit-border-radius: 4px 4px;
   -moz-border-radius: 4px 4px;
-  -o-border-radius: 4px 4px;
-  -ms-border-radius: 4px 4px;
-  -khtml-border-radius: 4px 4px;
+  border-radius: 4px 4px;
   width: 14px;
 }
 #removal_planner #tabs .jspHorizontalBar .jspCap {
@@ -410,4 +394,21 @@ z-index: 1;
 }
 #removal_planner .time .day {
   font-weight: bold;
+}
+#removal_planner #start_layer {
+  background-color: #E9EAEF;
+  opacity: .8;
+  filter: alpha(opacity = 80);
+  position: absolute;
+  top: 280px;
+  /*display: none;*/
+  height: 455px;
+  border-radius: 4px 4px;
+  -moz-border-radius: 4px 4px;
+  z-index: 200;
+  width: 762px;
+}
+#removal_planner .loading_animation {
+  display: none;
+  padding: 100px 0 255px 345px;
 }

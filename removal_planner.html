@@ -12,6 +12,7 @@
 <title>Umzugsplaner</title>
 </head>
 <body id="removal_planner">
+  <div id="start_layer">&nbsp;</div>
   <p id="form_text">Um Ihnen die Vorbereitungen zu erleichtern, bieten wir Ihnen hier einen auf Ihre Bed&#252;rfnisse ausgerichteten Umzugsplaner an.</p>
   <div id="form_holder">
     <form id="rem_plann_form">
@@ -38,6 +39,9 @@
         <li><a href="#tab3">In der Umzugswoche</a><i class="over_tab">&nbsp;</i><i class="under_tab">&nbsp;</i></li>
         <li class="last_tab"><a href="#tab4">Nach der Umzugswoche</a><i class="over_tab">&nbsp;</i><i class="under_tab">&nbsp;</i></li>
       </ul>
+      <div class="loading_animation">
+        <img src="img/loading-gif-animation.gif" alt="ani">
+      </div>
       <div class="tab_content" id="tab1">
         <div class="scroll-pane"><div class="tips">&nbsp;</div></div>
       </div>
@@ -50,11 +54,11 @@
       <div class="tab_content" id="tab4">
         <div class="scroll-pane"><div class="tips">&nbsp;</div></div>
       </div>
+      <div id="pdf_holder" class="pdf_export">
+        <p>PDF Export</p>
+      </div>
     </div>
-    <div id="pdf_holder" class="pdf_export">
-      <p>PDF Export</p>
-    </div>
-  </div>  
+  </div>
   <script src="http://www.google.com/jsapi"></script>
   <script src="js/removal_planner.js"></script>
   <script src="js/libs/jquery.mousewheel.js"></script>

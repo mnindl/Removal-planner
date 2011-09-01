@@ -130,7 +130,8 @@ UMZUGSPLANER.compute = (function () {
           item_date = new Date(removal_date.getTime() + order*day_milli_sec),
           removal_week_end = new Date(removal_date.getTime() + week_milli_sec),
           tip = getTip(xml, order, removal_type),
-          item_date_out = dateOut(item_date);
+          item_date_out = dateOut(item_date),
+          tab_id = $('li.ui-tabs-selected a').attr('href');
     /*var end = new Date().getTime();
     var time = end - start;
     console.log('Execution time: ' + time);*/
@@ -156,11 +157,14 @@ UMZUGSPLANER.compute = (function () {
     $('#tab2 .scroll-pane .tips').append(html_tab2.join(""));
     $('#tab3 .scroll-pane .tips').append(html_tab3.join(""));
     $('#tab4 .scroll-pane .tips').append(html_tab4.join(""));
-    $('#plan_result').show();
-    if ($('li.ui-tabs-selected a').attr('href') != undefined) {
-      var tab_id = $('li.ui-tabs-selected a').attr('href');
-      $(tab_id+" .scroll-pane").jScrollPane();
-    }
+    $('#plan_result').fadeIn('slow');
+    window.setTimeout(function() {
+      $('.loading_animation').fadeOut('slow');
+      $('.tab_content').fadeIn('slow');
+      if ($('li.ui-tabs-selected a').attr('href') != undefined) {
+        $(tab_id+" .scroll-pane").jScrollPane();
+      }
+    }, 1000);
   }
   function initTabs() {
     $('#tabs').tabs( {
@@ -174,7 +178,9 @@ UMZUGSPLANER.compute = (function () {
     $("#rem_plann_form .submit").click(function (event) {
       event.preventDefault();
       getXml();
-      return false;
+      $('#start_layer').fadeOut('slow');
+      $(".tab_content").fadeOut('slow');
+      $(".loading_animation").fadeIn('slow');
     });
     $('#form_label').click(function(){
       $('#datepicker').datepicker("show");
