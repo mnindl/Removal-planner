@@ -15,7 +15,7 @@ UMZUGSPLANER.compute = (function () {
       dayNames = ['Sonntag', 'Montag', 'Dienstag', 'Mittwoch', 'Donnerstag', 'Freitag', 'Samstag'];
   function createPDF() {
     var time = (Math.round((removal_date.getTime()) / 1000)),
-        url = "http://pdf.umzugskalender.de/umzugsplanerPDF/generate_pdf_small_font.php?currentTab="+currentTab+"&removal_date="+time+"&removal_type="+removal_type;
+        url = "http://pdf.umzugskalender.de/umzugsplaner/generatePDF/generate_pdf_small_font.php?currentTab="+currentTab+"&removal_date="+time+"&removal_type="+removal_type;
     window.open(url);
   }
   function getTip(xml, order, removal_type) {
