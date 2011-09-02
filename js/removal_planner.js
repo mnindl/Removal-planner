@@ -1,7 +1,7 @@
 /*global window */
 /*global $ */
 /*global alert */
-/*global googl */
+/*global google */
 google.load("jquery", "1.6.2");
 google.load("jqueryui", "1.8.14");
 if (!window.UMZUGSPLANER) { var UMZUGSPLANER = {}; }
@@ -128,7 +128,7 @@ UMZUGSPLANER.compute = (function () {
     $('#tab4 .scroll-pane .tips').append(html_tab4.join(""));
     $('#plan_result').fadeIn('slow');
     window.setTimeout(function(tab_id) {
-      $('.loading_animation').fadeOut('slow');
+      $('.loading_animation').hide();
       $('.tab_content').fadeIn('slow');
       if ($('li.ui-tabs-selected a').attr('href') !== undefined) {
         $(tab_id+" .scroll-pane").jScrollPane();
@@ -183,10 +183,10 @@ UMZUGSPLANER.compute = (function () {
   function initEventshandler() {
     $("#rem_plann_form .submit").click(function (event) {
       event.preventDefault();
+      $('#start_layer').hide('slow');
+      $(".tab_content").hide('slow');
+      $(".loading_animation").show();
       getXml();
-      $('#start_layer').fadeOut('slow');
-      $(".tab_content").fadeOut('slow');
-      $(".loading_animation").fadeIn('slow');
     });
     $('#form_label').click(function(){
       $('#datepicker').datepicker("show");
