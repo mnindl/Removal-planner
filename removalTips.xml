@@ -131,7 +131,7 @@
 <removalTipItem type="own" order="-9">
   <headline>Die ersten Kartons packen</headline>
   <text>Persönlicher Bedarf, Medikamente, Kulturbeutel, Wäsche und Ähnliches getrennt verpacken.</text>
-  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzugsplaner/umzug/r122/R1222/r12221/12221.jsp">
+  <link type="intern" href="http://www.immobilienscout24.de/de/umzug/umzug-eigenregie/umzugskartons/packen.jsp">
     Tipps zum richtigen Einpacken
   </link>
 </removalTipItem>
@@ -280,7 +280,7 @@
   <link type="intern" href="http://www.immobilienscout24.de/Lead/Portal/Anmelden">
     Hier neue Anbieter in Ihrer Region finden
   </link>
-  <link type="extern" href="http://redirect.immobilienscout24.de/servlet/redirect?ref=%2Fde%2Fsnippets%2Fumzug%2Fmein-umzugsplaner%2Fsnippet.xml&#38;location=https%3A%2F%2Feinfach-ummelden.de%2F">
+  <link type="extern" href="http://redirect.immobilienscout24.de/servlet/redirect?ref=%2Fde%2Fsnippets%2Fumzug%2Fmein-umzugsplaner%2Fsnippet.xml&#38;location=http%3A%2F%2Feinfach-ummelden.de%2F">
     Adresse bequem online ummelden
   </link>
 </removalTipItem>
